@@ -43,13 +43,19 @@
 
 \section{Overview}
 
-\cvline{}{Years of experience leading technology teams on projects from conception to completion.   Focus on mobile, emerging technologies, and digital media. Comfortable working at both the micro level (building container/codec/format internals) and the macro level (building highly available and scalable platforms for digestion, management, transformation, distribution, and consumption of media).  }
-
+\cvline{}{Years of experience leading technology teams and delivering projects under strict time and quality constraints.   Strong advocate for efficient processes, effective communication, and best practices in software development.   Adept  technologist with experience working every scale, from firmware development for hardware peripherals, to distributed processing systems managing complex encoding workflows across thousands of systems. }
 
 \section{Work Experience}
 
-\cventry{2017 - Present}{Director of Engineering (Mobile)}{MediData}{New York}{NY}{
-	   Led engineering teams responsible for Patient Cloud platform supporting the collection of clinical trial data directly from patients and clinicians on mobile devices and wearable sensors.   Products include ePRO (the iOS and Android application used for patient reported outcomes), Patient Cloud (an iOS tablet application for clinician reported outcomes), AppConnect (a native SDK for use by third party developers), Sensor Link (a platform for direct ingestion of data from wearable sensors), and the backend platform used by the products. During tenure, launched two new major mobile product initiatives.  Also migrated all native mobile development to Swift and Kotlin. Additionally, build compliance dashboards for data reporting, and launched effort to migrate data collection and analysis on to a scalable real time stream processing framework (Apache Flink).  Introduced  organizational and process improvements that resulted in a 250% increase in average team velocity. }
+% The category where complexity in the product offerings was paired with complexity 
+% in customer needs and not served well by existing search. s.     
+
+\cventry{2018}{Chief Technologist}{Barking For Centuries, LLC}{New York}{NY}{Led small team of senior developers and built vertical product search engine on a contract basis for an early stage startup.   The extract / transform / load (ETL) pipeline at the core of the system relies entirely on custom built machine learning infrastructure for product identification and extraction.    The pipeline was written in Python, the NLP components using spaCy for classification and entity extraction, as well as NLTK and scikit-learn for text extraction.  The product image recognition and classification models were built on SageMaker,  with preprocessing and color analysis using OpenCV,  scikit-image, and others.  DynamoDB  and SQS / SNS for the pipeline data flow and message store.   The search API was written in Go,  querying against Elasticsearch indexes.    The web frontend was written in React JS.    All components of the system were designed as either micro-services or discrete data flow transformation steps, each built and deployed as discrete docker images.   These images were deployed automatically via CI/CD as  pods on to a Kubernetes cluster which would automatically scale the the number of each it ran to match demand.  The Kubernetes cluster, was built and managed using Terraform and it, in turn configured so that the number of worker nodes in the cluster also auto scaled to meet demand. }
+
+
+
+\cventry{2017}{Director of Engineering (Mobile)}{MediData}{New York}{NY}{
+	   Led engineering teams responsible for Patient Cloud platform supporting the collection of clinical trial data directly from patients and clinicians on mobile devices and wearable sensors.   Products include ePRO (the iOS and Android application used for patient reported outcomes), Patient Cloud (an iOS tablet application for clinician reported outcomes), AppConnect (a native SDK for use by third party developers), Sensor Link (a platform for direct ingestion of data from wearable sensors), and the backend platform used by the products. During tenure, launched two new major mobile product initiatives.  Also migrated all native mobile development to Swift and Kotlin. Additionally, build compliance dashboards for data reporting, and launched effort to migrate data collection and analysis on to a scalable real time stream processing framework (Apache Flink).  Introduced  organizational and process improvements that resulted in a 2.5x increase in average team velocity. }
 
 \cventry{2013 - 2016}{Director of Mobile}{Huge}{Brooklyn}{NY}{Started as Principal Architect, promoted to Director of Mobile.  In latter role, led 20+ person cross-functional team of iOS, Android, and backend engineers - as well as QA analysts, designers, and product managers. Institute and evangelize agile best practices, continuous integration, and continuous delivery. In Principal Architect role, sponsored new technology investigations and initiatives (interior way-finding,  Leap Motion, Arduino, and embedded system prototypes), as well as internal outreach initiatives (engineering blog, organizing meetups, open source efforts, etc.). Notable client work include `smart' bluetooth audio/video accessories that support live video streaming and voice commands, among other features, and a companion application for an AAA game publisher that allows players to scan their own likeness to be rendered as an in-game avatar, as well as numerous  BTB and BTC mobile commerce applications.}
 
@@ -106,36 +112,10 @@ Founded and managed a consultancy of five principal partners, and ten additional
 
 \cventry{1990 - 1994}{Bachelor of Arts in History}{The University of Chicago}{Chicago, IL}{}{}
 
-\section{Skills}
-% \subsection{Languages}
-
-\cvline{Languages}{Swift, Objective-C, C,  C++, Javascript, Ruby, Java, C\#, Python,
-  Lua, Lisp}
-
-% \subsection{Systems}
-
-\cvline{Systems}{ Experience with almost every flavor of Unix, deep
-  knowledge of Linux/BSD/OSX/Unix internals, iOS, Android. }
-
-%\subsection{Media}
-
-\cvline{Media}{ QuickTime, H.264, MPEG-4,
-  MPEG-2, JPEG, TIFF, AAC, MP3, WAV, AIFF  }
-
 \section{OSS Software} 
 \cvline{}{OSS contributions not otherwise noted in work history;}
 \cvlistitem{
 Author, BeaconScanner, desktop utility for OSX for detecting and managing iBeacons.  http://tinyurl.com/j6rpfbc  (2014)
 }
-\cvlistitem{
-Maintainer of libtiff. http://www.libtiff.org/ (1999-2001)
-}
-\cvlistitem{
-Contributor to the Debian bootfloppy project
-}
-\cvlistitem{
- Author of the changedfiles system, a combination of a kernel module and a user space client that provided real time notification of file system modifications and offered programatic hooks for any arbitrary actions to be taken in response. Included inline support for triggering filesystem replication by via rsync, and FTP, as well as mysql database import.  Became obsolete with the introduction of DBUS to the Linux kernel
- }
-
 
 \end{document}
