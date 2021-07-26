@@ -1,0 +1,11 @@
+Head of Technology, Dayforward, Inc.
+
+Head of technology for life insurance startup. Led seven person that
+built algorithmic underwriting and policy management platform in under
+ten months that was was ready to launch the day regulatory approval
+was granted to the company to be a carrier.  Backend implemented as
+containerized go/gRPC microservices deployed on Kubernetes and
+accessed from frontend Vue web application via a federated GraphQL API.
+
+
+

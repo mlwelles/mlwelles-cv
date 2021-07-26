@@ -26,7 +26,7 @@
 \familyname{Welles}
 % All information in this block is optional, comment out any lines you don't need
 %\title{Curriculum Vitae}
-\address{201 Eastern Parkway  Apt. 3E}{Brooklyn, NY 11238}
+\address{55 E. 76th St. Apt 13}{New York, NY 10021}
 \phone{917-586-9218}
 \email{mlwelles@gmail.com}
 
@@ -43,14 +43,20 @@
 
 \section{Overview}
 
-\cvline{}{Years of experience leading technology teams and delivering projects under strict time and quality constraints.   Strong advocate for efficient processes, effective communication, and best practices in software development.   Adept  technologist with experience working every scale, from firmware development for hardware peripherals, to distributed processing systems managing complex encoding workflows across thousands of systems. }
+\cvline{}{Years of experience leading technology teams and delivering projects under strict time and quality constraints.   Strong advocate for efficient processes, effective communication, and best practices in software development.   Adept technologist with experience working on everything from from firmware for embedded devices to distributed systems processing complex encoding workflows across thousands of systems.}
 
 \section{Work Experience}
 
 % The category where complexity in the product offerings was paired with complexity 
-% in customer needs and not served well by existing search. s.     
+% in customer needs and not served well by existing search.
 
-\cventry{2018}{Chief Technologist}{Barking For Centuries, LLC}{New York}{NY}{Led small team of senior developers and built vertical product search engine on a contract basis for an early stage startup.   The extract / transform / load (ETL) pipeline at the core of the system relies entirely on custom built machine learning infrastructure for product identification and extraction.    The pipeline was written in Python, the NLP components using spaCy for classification and entity extraction, as well as NLTK and scikit-learn for text extraction.  The product image recognition and classification models were built on SageMaker,  with preprocessing and color analysis using OpenCV,  scikit-image, and others.  DynamoDB  and SQS / SNS for the pipeline data flow and message store.   The search API was written in Go,  querying against Elasticsearch indexes.    The web frontend was written in React JS.    All components of the system were designed as either micro-services or discrete data flow transformation steps, each built and deployed as discrete docker images.   These images were deployed automatically via CI/CD as  pods on to a Kubernetes cluster which would automatically scale the the number of each it ran to match demand.  The Kubernetes cluster, was built and managed using Terraform and it, in turn configured so that the number of worker nodes in the cluster also auto scaled to meet demand. }
+\cventry{2020-}{Head of Technology}{Dayforward}{New York}{NY}{Head of technology for life insurance startup. Led small team that desiged and built the companies algorithmic underwriting and policy management platform.  Initial development was completed in under ten months and the platform and application were ready to launch thesame day the company recieved regulatory approval to do so.  The platform was implemented as containerized go gRPC microservices deployed on kubernetes and accessed from the accompanying frontend Vue application via a federated GraphQL API.}
+
+\cventry{2019}{Director of Software Engineering}{UTC}{Brooklyn}{NY}{Managed team of 17 engineers at DX, the digital accelerator UTC established in Brooklyn NY. Oversaw multiple project teams, ranging from IOT sensors and accompanying mobile applications for managing
+industrial refrigeration to standardized design systems with accompanying developer
+tools. Frontend engineering director, led efforts to normalize, document and evangelize engineering processes, standards and best practices.}
+
+\cventry{2018}{Independent Contractor}{Barking For Centuries, LLC}{New York}{NY}{Serving as chief technologist for an early stage startup, led team of contracted senior developers to build a category vertical product search engine. The extract / transform / load (ETL) pipeline at the core of the system relies entirely on custom built machine learning infrastructure for product identification and extraction.    The pipeline was written in Python, the NLP components using spaCy for classification and entity extraction, as well as NLTK and scikit-learn for text extraction.  The product image recognition and classification models were built on SageMaker,  with preprocessing and color analysis using OpenCV,  scikit-image, and others.  DynamoDB  and SQS / SNS for the pipeline data flow and message store.   The search API was written in Go,  querying against Elasticsearch indexes.    The web frontend was written in React JS.    All components of the system were designed as either micro-services or discrete data flow transformation steps, each built and deployed as discrete docker images.   These images were deployed automatically via CI/CD as  pods on to a Kubernetes cluster which would automatically scale the the number of each it ran to match demand.  The Kubernetes cluster, was built and managed using Terraform and it, in turn configured so that the number of worker nodes in the cluster also auto scaled to meet demand. }
 
 
 
