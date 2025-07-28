@@ -12,7 +12,7 @@
 %\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 %\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'	
 
-\moderncvtheme[green]{classic} 
+\moderncvtheme[blue]{classic} 
 \usepackage[utf8]{inputenc} 
 
 \usepackage[scale=0.8]{geometry}% Reduce document margins
@@ -26,7 +26,7 @@
 \familyname{Welles}
 % All information in this block is optional, comment out any lines you don't need
 %\title{Curriculum Vitae}
-\address{55 E. 76th St. Apt 13}{New York, NY 10021}
+\address{5657 NY-97}{Narrowsburg NY 12764}
 \phone{917-586-9218}
 \email{mlwelles@gmail.com}
 
@@ -43,70 +43,89 @@
 
 \section{Overview}
 
-\cvline{}{Years of experience as a developer and leading technology teams and delivering projects under strict time and quality constraints.   Strong advocate for efficient processes, effective communication, and best practices in software development.   Adept technologist with experience working on everything from from firmware for embedded devices to distributed systems processing complex encoding workflows across thousands of systems.}
-
+% Overview
+% Reworked for clarity and concision.
+\cvline{}{Software engineer and technology leader with decades of experience building and leading teams under tight time and quality constraints.  I am a strong advocate for efficient processes, clear communication and best practices in software development.  My experience ranges from writing firmware for embedded devices to architecting distributed systems that process complex encoding workflows across thousands of machines.}
 \section{Experience}
 
-\cventry{2020-}{Director of Software Development}{Raytheon Technologies}{New York}{NY}{Rejoined what was formerly the UTC Digital Accelerator (DX), now reorganized post-merger as Enterprise Data Services (EDX)  to focus on building a next generation data platform for Raytheon aerospace applications}
-\cvline{-}{Technical lead for team developing flight data platform pathfinder initiatives, creating streaming flight telemetry pipelines for multiple models of Pratt \& Whitney commercial jet engines.}
-\cvline{}{Upon arrival at terminal gate, an aircraft is connected to a ground station which uploads the  telemetry captured from the thousands of sensors monitoring the engines and control surfaces during the flights.}  
-\cvline{}{Within a five minutes the datasets are processed and the results from algorithmic fault detection and ML failure prediction and anomaly detection model  scoring applied.}   
-\cvline{}{Alerts are triggered from the results, with actions taken in response varying depending on the severity of the fault or the confidence of the score -  grounding the aircraft  for emergency maintenance, or scheduling a team to meet it at its next or subsequent destination a to perform inspection and repair.}
-\cvline{}{A comprehensive  audit trail is kept so that lineage for each field in the records produced can traced back to a specific code revision or model version, and can be recreated.}
-\cvline{}{Model training workflows are similarly managed, each new model versioned, and the code revision, training data set, and hyper parameters specified to produce it captured and reproducible.}
-\cvline{}{Technologies:  Databricks, Spark, Python, SparkML, SkLearn, Pandas. }
-\cvline{-}{Led team 14 of developers and contractors, split between three agile project teams}
-\cvline{-}{Supervised creation of developer resources for the 40+ teams onboarding on to the new platform, publishing guidelines, standards, best practices, and reference project template.}
-\cvline{-}{Oversaw teams responsible for porting and optimizing existing internal data science and machine learning libraries and tools to new platform.}
-\cventry{2020-2021}{Head of Technology}{Dayforward}{New York}{NY}{Head of technology and development lead for life insurance startup. Led small team that designed and built the companies algorithmic underwriting and policy management platform.  Initial development was completed in under ten months and the platform and application were ready to launch the same day the company received regulatory approval to do so.  The platform was implemented as containerized go gRPC microservices deployed on kubernetes and accessed from the accompanying frontend Vue application via a federated GraphQL API.}
+\cventry{2024-2025}{Principal Engineer}{Istari Digital}{New York}{NY}{Istari Digital focuses on interconnected digital systems where secure, shareable digital threads facilitate the development of cyber‑physical systems.  The platform enables zero‑trust, zero‑knowledge security while connecting to tools such as Cameo, CATIA, Nastran, OpenFOAM and other computational modeling suites to accelerate digital‑twin development and facilitate secure collaboration.}
+% Key contributions at Istari Digital
+\cvline{-}{Led the rewrite of the platform to meet strict security and threading requirements, creating a platform that manages digital engineering assets, providing for workflow automation, secure collaboration,with cryptographically verified revisionsing and tracking of lineage and derivation relationships between assets without the backend having access to sensitive file contents.}
+\cvline{-}{Implemented DoD‑compliant control tagging to ensure customers retain data sovereignty.  This provided strict controls and audit trails while enabling frictionless sharing of models and artifacts among individual engineers, teams and organizations.}
+\cvline{-}{Delivered all major program milestones on time and successfully relaunched the product for commercial and government clients.}
+\cvline{-}{Led two teams designing and implementing a secure backend registry service in Python and the SDKs for accessing it.  The cryptographic core was written in Rust and compiled into Python bindings and WebAssembly, forming the foundation for the Python and TypeScript libraries used by automation agents and the web application.}
+\cventry{2020-2023}{Director of Software Development}{Raytheon Technologies}{New York}{NY}{Rejoined what was formerly the UTC Digital Accelerator (DX)—reorganized post‑merger as Enterprise Data Services (EDX)—to build a next‑generation data platform for Raytheon aerospace applications.}
+% Key contributions at Raytheon Technologies
+\cvline{-}{Technical lead for pathfinder initiatives developing streaming flight telemetry pipelines for multiple models of Pratt \& Whitney commercial jet engines.}
+\cvline{-}{Designed systems where, upon gate arrival, aircraft connect to ground stations to upload telemetry from thousands of sensors monitoring engines and control surfaces.}
+\cvline{-}{Within minutes, processed datasets and applied algorithmic fault detection, machine‑learning failure prediction and anomaly detection models.}
+\cvline{-}{Triggered alerts with responses proportional to severity and confidence—from grounding aircraft for emergency maintenance to scheduling inspection at subsequent destinations.}
+\cvline{-}{Maintained comprehensive audit trails to trace the lineage of every output field back to specific code revisions or model versions, enabling reproducibility.}
+\cvline{-}{Managed model‑training workflows with rigorous versioning; captured code revisions, training datasets and hyperparameters so results could be reproduced.}
+\cvline{-}{Technologies included Databricks, Spark, Python, SparkML, scikit‑learn and Pandas.}
+\cvline{-}{Led a team of 14 developers and contractors split across three agile project teams.}
+\cvline{-}{Supervised creation of onboarding resources for more than 40 teams, publishing guidelines, standards, best practices and reference project templates.}
+\cvline{-}{Oversaw teams porting and optimizing existing internal data science and machine‑learning libraries and tools to the new platform.}
+\cventry{2020-2021}{Head of Technology}{Dayforward}{New York}{NY}{Head of technology and development lead for a life‑insurance startup. Led a small team that designed and built the company’s algorithmic underwriting and policy‑management platform.  The platform comprised containerized Go gRPC microservices deployed on Kubernetes and exposed via a federated GraphQL API to a Vue.js frontend.  Initial development was completed in under ten months, and the platform launched the same day the company received regulatory approval.}
 
-\cventry{2019}{Director of Software Engineering}{UTC Aerospace Systems}{Brooklyn}{NY}{Managed team of 17 engineers at DX, the digital accelerator UTC established in Brooklyn NY. Oversaw multiple project teams, ranging from IOT sensors and accompanying mobile applications for managing
-industrial refrigeration to standardized design systems with accompanying developer
-tools. Frontend engineering director, led efforts to normalize, document and evangelize engineering processes, standards and best practices.}
+\cventry{2019}{Director of Software Engineering}{UTC Aerospace Systems}{Brooklyn}{NY}{Managed a team of 17 engineers at the UTC Digital Accelerator in Brooklyn.  Oversaw multiple project teams—from IoT sensors and mobile apps for industrial refrigeration to standardized design systems and developer tools.  As the frontend engineering director, led efforts to normalize, document and evangelize engineering processes, standards and best practices.}
 
-\cventry{2018}{Independent Contractor}{Barking For Centuries, LLC}{New York}{NY}{Serving as chief technologist for an early stage startup, led team of contracted senior developers to build a category vertical product search engine. The extract / transform / load (ETL) pipeline at the core of the system relies entirely on custom built machine learning infrastructure for product identification and extraction.    The pipeline was written in Python, the NLP components using spaCy for classification and entity extraction, as well as NLTK and scikit-learn for text extraction.  The product image recognition and classification models were built on SageMaker,  with preprocessing and color analysis using OpenCV,  scikit-image, and others.  DynamoDB  and SQS / SNS for the pipeline data flow and message store.   The search API was written in Go,  querying against Elasticsearch indexes.    The web frontend was written in React JS.    All components of the system were designed as either micro-services or discrete data flow transformation steps, each built and deployed as discrete docker images.   These images were deployed automatically via CI/CD as  pods on to a Kubernetes cluster which would automatically scale the the number of each it ran to match demand.  The Kubernetes cluster, was built and managed using Terraform and it, in turn configured so that the number of worker nodes in the cluster also auto scaled to meet demand. }
+\cventry{2018}{Independent Contractor}{Barking For Centuries, LLC}{New York}{NY}{Served as chief technologist for an early‑stage startup and led a team of senior contractors to build a vertical product search engine.}
+% Key contributions at Barking For Centuries
+\cvline{-}{Designed and implemented an ETL pipeline built around custom machine‑learning infrastructure for product identification and extraction.  The pipeline was written in Python with NLP components using spaCy for classification and entity extraction, along with NLTK and scikit‑learn.}
+\cvline{-}{Developed product image recognition and classification models on AWS SageMaker, with preprocessing and color analysis using OpenCV and scikit‑image.}
+\cvline{-}{Used DynamoDB and AWS SQS/SNS for data flow and message storage.}
+\cvline{-}{Built the search API in Go against Elasticsearch indexes and developed the web frontend in React.js.}
+\cvline{-}{Architected the system as microservices and discrete transformation steps, each packaged as a Docker image and deployed via CI/CD to a Kubernetes cluster that automatically scaled both pods and worker nodes.  The cluster itself was built and managed with Terraform.}
 
 
 
-\cventry{2017}{Director of Engineering (Mobile)}{MediData}{New York}{NY}{
-	   Led engineering teams responsible for Patient Cloud platform supporting the collection of clinical trial data directly from patients and clinicians on mobile devices and wearable sensors.   Products include ePRO (the iOS and Android application used for patient reported outcomes), Patient Cloud (an iOS tablet application for clinician reported outcomes), AppConnect (a native SDK for use by third party developers), Sensor Link (a platform for direct ingestion of data from wearable sensors), and the backend platform used by the products. During tenure, launched two new major mobile product initiatives.  Also migrated all native mobile development to Swift and Kotlin. Additionally, build compliance dashboards for data reporting, and launched effort to migrate data collection and analysis on to a scalable real time stream processing framework (Apache Flink).  Introduced  organizational and process improvements that resulted in a 2.5x increase in average team velocity. }
+\cventry{2017}{Director of Engineering (Mobile)}{MediData}{New York}{NY}{Led engineering teams responsible for the Patient Cloud platform, which collects clinical trial data directly from patients and clinicians via mobile devices and wearable sensors.}
+% Key contributions at MediData
+\cvline{-}{Managed products including ePRO (iOS and Android app for patient‑reported outcomes), Patient Cloud (iOS tablet app for clinician‑reported outcomes), AppConnect (native SDK for third‑party developers), Sensor Link (platform for ingesting data from wearables) and the supporting backend.}
+\cvline{-}{Launched two major mobile product initiatives and migrated all native development to Swift and Kotlin.}
+\cvline{-}{Built compliance dashboards for data reporting and initiated migration of data collection and analysis to a scalable real‑time stream‑processing framework (Apache Flink).}
+\cvline{-}{Instituted organizational and process improvements that increased average team velocity by 2.5×.}
 
-\cventry{2013 - 2016}{Director of Mobile}{Huge}{Brooklyn}{NY}{Started as Principal Architect, promoted to Director of Mobile.  In latter role, led 20+ person cross-functional team of iOS, Android, and backend engineers - as well as QA analysts, designers, and product managers. Institute and evangelize agile best practices, continuous integration, and continuous delivery. In Principal Architect role, sponsored new technology investigations and initiatives (interior way-finding,  Leap Motion, Arduino, and embedded system prototypes), as well as internal outreach initiatives (engineering blog, organizing meetups, open source efforts, etc.). Notable client work include `smart' bluetooth audio/video accessories that support live video streaming and voice commands, among other features, and a companion application for an AAA game publisher that allows players to scan their own likeness to be rendered as an in-game avatar, as well as numerous  BTB and BTC mobile commerce applications.}
+\cventry{2013 - 2016}{Director of Mobile}{Huge}{Brooklyn}{NY}{Started as Principal Architect and was later promoted to Director of Mobile.}
+% Key contributions at Huge
+\cvline{-}{Led a cross‑functional team of more than 20 iOS, Android and backend engineers, QA analysts, designers and product managers.  Evangelized agile best practices, continuous integration and continuous delivery.}
+\cvline{-}{As Principal Architect, sponsored new technology investigations and initiatives such as interior way‑finding, Leap Motion, Arduino and embedded system prototypes, and championed internal outreach through an engineering blog, meetups and open‑source efforts.}
+\cvline{-}{Directed notable client projects including smart Bluetooth audio/video accessories supporting live video streaming and voice commands, a companion application for an AAA game publisher that scanned players’ likenesses into avatars, and numerous B2B and B2C mobile commerce applications.}
 
 \cventry{2011 - 2013}{Manager of Mobile Technology}{Consumer Reports}{Yonkers}{NY}{
-Founded mobile applications and new media group. Built in-house team responsible for mobile applications development. Responsibilities included overall mobile product strategies and technical execution. Launched flagship ratings application and managed external vendors in the maintenance of a portfolio of legacy applications.
+Founded the mobile applications and new media group and built an in‑house team responsible for mobile application development.  Defined mobile product strategies and led technical execution.  Launched the flagship ratings application and managed external vendors maintaining a portfolio of legacy apps.
 }
 
 %\cventry{April 2011– July 2011}{Consultant}{Poll Everywhere}{San Francisco}{CA}{Developed OSX desktop version of presenter application, for use in displaying dynamically updating poll results results and charts during presentations}
 
 %\cventry{April 2008– April 2011}{Senior Software Engineer - iTunes Store
-\cventry{2008 - 2011}{Senior Software Engineer - iTunes Store
-  Video Workflow Group}{Apple}{Cupertino}{CA}{
-Senior engineer on a team of five responsible for the encoding and assembly of all iTunes video media. Responsible for the encoding toolchain used by the processing cluster, as well as for the specification of formats of deliverable media, the test suites to validate the formats, and the creation of reference media for use by hardware teams in compliance testing.  Heavily involved in the continuous improvement, day-to-day operations, business production, and engineering of the visual and audio quality of Store media. Led two major rewrites of the video workflow - the first for the launch of the HDTV product and the second for the launch of international video and television.
+\cventry{2008 - 2011}{Senior Software Engineer – iTunes Store Video Workflow Group}{Apple}{Cupertino}{CA}{
+Senior engineer on a team of five responsible for encoding and assembling all iTunes video media.  Owned the encoding toolchain used by the processing cluster and specified deliverable media formats, developed test suites to validate them and created reference media for hardware compliance testing.  Contributed to continuous improvement and day‑to‑day operations, business production and the engineering of visual and audio quality of Store media.  Led two major rewrites of the video workflow: one for the HDTV launch and another for international video and television.
 }
 
 
 
 %\cventry{August 2007 – March 2008}{Senior Software Architect}{The New
 \cventry{ 2007 - 2008}{Senior Software Architect}{The New York Times}{New York}{NY}{
-Led effort to incorporate continuous integration into the development and release processes of NYTimes.com. Created tools, procedures, and processes for the testing and packaging of software through the chain of production. Authored tools to help with process automation. Supervised overall architectural design for the effort to develop a new content management system for news.
+Led the incorporation of continuous integration into the development and release processes of NYTimes.com.  Created tools, procedures and processes for testing and packaging software through the production pipeline and authored automation tools.  Supervised overall architectural design for the development of a new content management system.
 }
 
  
 \cventry{2006 - 2007}{Founder, Senior Partner}{Bangstate}{New York}{NY}{
-Resumed role as senior partner, concentrating on web application using Ruby on Rails and other open source technologies. Strong focus on best practices, test-driven development, short milestones, iterative development, and close client interaction. Also served as acting CTO for haystack.com, a social networking site focused on music discovery and full album streaming content. In that role, led five person design and development team.
+Resumed role as senior partner focusing on web applications using Ruby on Rails and other open‑source technologies.  Emphasized best practices, test‑driven development, short milestones, iterative development and close client interaction.  Served as acting CTO for haystack.com, a music discovery and streaming social network, leading a five‑person design and development team.
   }
 
 %\subsection{The Associated Press}
 %\cventry{March  2004 – Sep 2006}{Systems Architect / Lead Developer}{The Associated Press}{New York}{NY}{Design, architecture of highly trafficked and
 \cventry{ 2004 - 2006}{Systems Architect/Lead Developer}{The Associated Press}{New York}{NY}{
-Designed and developed highly trafficked and dynamic systems for the distribution, digestion, and display of multimedia news content. Led team of seven developers, QA staff, and system engineers. Notable project was the development of AP Hosted Elections, a system that gathered, processed, and presented the up-to-the minute results of for the 2004 US presidential elections,  which served as the sole source of 2004 presidential election data for all major US news organizations. 
+Designed and developed high‑traffic, dynamic systems for distributing, processing and displaying multimedia news content.  Led a team of seven developers, QA staff and system engineers.  Notable project: AP Hosted Elections, which gathered, processed and presented up‑to‑the‑minute results for the 2004 U.S. presidential election and served as the sole source of data for all major U.S. news organizations.
  }
  
 %\subsection{Bangstate Inc.}
 %\cventry{September 1998  – March 2004}{Founder, Senior Partner}{Bangstate Inc.}{New York}{NY}{Founded and managed a consultancy of  
 \cventry{1998 - 2004}{Founder, Senior Partner}{Bangstate}{New York}{NY}{
-Founded and managed a consultancy of five principal partners, and ten additional developers, designers, and administrators. Responsible for the business as a whole, as well as delivering individual projects. Clients included organizations such as The Associated Press, The American Bar Association, Atlantic Records, Forbes Magazine, CIR/SEIU, Time, Inc. Notable projects included: TNEWS, the Internet distribution platform of the Associated Press that used standards-based protocols (NNTP, IPTC NITF XML) to distribute content that had previously only been available in proprietary formats over satellite and developing handheld applications for use by Military Family Research Institute at Purdue University.
+Founded and managed a consultancy of five principal partners and ten additional developers, designers and administrators.  Oversaw the business and delivered projects for clients including The Associated Press, American Bar Association, Atlantic Records, Forbes Magazine, CIR/SEIU and Time Inc.  Notable projects included TNEWS, an Internet distribution platform for the Associated Press that used standards‑based protocols (NNTP, IPTC NITF XML) to distribute content previously available only via proprietary satellite feeds, and handheld applications for the Military Family Research Institute at Purdue University.
 }
 
 %\cventry{August 1996 - January 1997}{Member, Technical Staff}{SOS Corp}{New York}{NY}{}
