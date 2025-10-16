@@ -14,10 +14,10 @@ Software engineer and technology leader with decades of experience building prod
 
 CubeNexus.ai builds a geospatial intelligence platform that fuses AI-assisted data ingestion, spatial analytics and 3D visualization for industrial and defense customers. I lead the technical strategy across ingestion, analytics, and user experience.
 
-- Re-architected the AI backend into containerized FastAPI microservices for intent classification, aggregation, retrieval and orchestration, with Dockerized pipelines to Elastic Beanstalk that cut release friction and enabled parallel service scaling.
-- Built a unified AWS control plane that ties Cognito, DynamoDB, S3, SQS and Bedrock together with real-time channels via Ably, formalizing uv-based development workflows, automated CI, and smoke/integration suites for the API surface.
-- Led the WebGPU-enabled Next.js front end, wiring secure auth, Pro-tier billing and the 3D visualizer to backend services while instituting Jest/React Testing Library coverage and shared component libraries.
-- Delivered a high-performance geospatial ingestion and intent analytics stack: streaming CSV parser with layered elevation services, TULSA coordinate conversion and Lambda-compatible Intent API featuring R-tree indexing, correlation analytics and trajectory modeling.
+- Hardened the AWS FastAPI backend’s authentication and deployment story by refactoring the personal access token subsystem, fixing Cognito/AWS settings validation, and introducing multi-stage Docker builds with uv-managed CI pipelines and coverage publishing.
+- Brought the WebGPU-enabled Next.js client in sync with the streaming backend—modularized Ably client helpers, enabled token refresh, resolved merge regressions, and expanded Jest/RTL coverage for the live demo experience.
+- Established disciplined CI for the intent-analysis API: added uv lockfiles, setuptools packaging fixes, GitHub Actions workflows, and an extensive pytest suite that exercises spatial correlation, T2 pathing, and Lambda entry points.
+- Reworked the geospatial parser’s Pandas pipeline—vectorized TULSA coordinate generation and datetime parsing, clarified ParseConfig abstractions, and converted parser results to DataFrame-based flows to lift throughput on industrial CSV imports.
 
 ### Principal Engineer, Istari Digital
 *Feb 2024 - Jul 2025 · New York, NY*
