@@ -5,45 +5,47 @@
 
 ## Overview
 
-Software engineer and technology leader with decades of experience building products and leading teams under tight deadlines and strict quality constraints. Advocate for efficient processes, clear communication, and best practices in software development. My experience ranges from writing firmware for embedded devices to architecting distributed systems that process complex encoding workflows across thousands of machines.
+Hands-on engineering leader with decades of experience building safety-critical and data-intensive products. Advocate for efficient processes, clear communication, and the adoption of best practices in software development. I partner closely with product and operations to set pragmatic guardrails, automate quality signals, and model the engineering culture I expect—clear communication, strong code hygiene, and accountability. Comfortable pairing strategic architecture decisions with deep dives into code, infrastructure, and tooling.
 
 ## Experience
 
 ### Consulting Principal Engineer, CubeNexus.ai
-*Sep 2025 - Present · Remote*
+*Aug 2025 - Present · Remote*
 
-CubeNexus.ai builds a geospatial intelligence platform that fuses AI-assisted data ingestion, spatial analytics and 3D visualization for industrial and defense customers. I lead the technical strategy across ingestion, analytics, and user experience.
+CubeNexus.ai builds a geospatial intelligence platform that pairs an LLM based natural language interface for querying temporal-spatial datasets with an dynamically updating interactive 3D visualization of the results.   I've been advising technical strategy across ingestion, analytics, and user experience, while diving deep in the codebase to bring it from prototype to production ready.
 
-- Hardened the AWS FastAPI backend’s authentication and deployment story by refactoring the personal access token subsystem, fixing Cognito/AWS settings validation, and introducing multi-stage Docker builds with uv-managed CI pipelines and coverage publishing.
-- Brought the WebGPU-enabled Next.js client in sync with the streaming backend—modularized Ably client helpers, enabled token refresh, resolved merge regressions, and expanded Jest/RTL coverage for the live demo experience.
-- Established disciplined CI for the intent-analysis API: added uv lockfiles, setuptools packaging fixes, GitHub Actions workflows, and an extensive pytest suite that exercises spatial correlation, T2 pathing, and Lambda entry points.
-- Reworked the geospatial parser’s Pandas pipeline—vectorized TULSA coordinate generation and datetime parsing, clarified ParseConfig abstractions, and converted parser results to DataFrame-based flows to lift throughput on industrial CSV imports.
+- Hardened the API backend with rebuilt auth and token handling, added formalized validation, and refactored code paths for clarity and performance.
+- Added support for live streaming of telemetry from the drones developed by the company.  Wired in Ably to the drone controller, the backend, and frontend WebGL visualizer.  Successfully demonstrated during a live flight of sensor equipped drone, the front-end rendering a visualization of its flight path and sensor readings on the globe in real-time. 
+- Added CI/CD to all project repositories with static analysis, automated tests, build and deployment automation.
+- Rewrote the ingestion pipeline to transforms geospatial data into the proprietry format at the core of the company IP so as to be able to handle datasets of the size that are produced by industry.  (PySpark, Pandas)
 
 ### Principal Engineer, Istari Digital
 *Feb 2024 - Jul 2025 · New York, NY*
 
-Istari Digital focuses on interconnected digital systems where secure, shareable digital threads facilitate the development of cyber‑physical systems. The platform enables zero‑trust, zero‑knowledge security while connecting to tools such as Cameo, CATIA, Nastran, OpenFOAM and other computational modeling suites to accelerate digital‑twin development and facilitate secure collaboration.
+Istari Digital focuses on interconnected digital systems where secure, shareable digital threads facilitate the development of cyber‑physical systems. The platform enables zero‑trust, zero‑knowledge security while connecting and enabling the automation of tools as Cameo, CATIA, Nastran, OpenFOAM and other computational modeling suites to accelerate digital‑twin development and facilitate secure collaboration.
 
-- Software architect and technical lead for zero-trust, zero-knowledge core platform rewrite to meet the strict security and compliance needs of defense and aerospace customers while still providing for frictionless workflow automation, secure collaboration, and trust in the integrity of cryptographically verified and version managed digital assets, preserving a complete digital thread not just of the changes to the assets but to their dependencies and lineage – what versions of what assets were used in the production of what versions which other assets, what tools were used to do so and by whom. All without the back end ever accessing any of sensitive contents of the files themselves.
+- Designed cryptographically verified asset lineage that preserves dependencies, provenance, and tooling metadata without exposing sensitive payloads—enabling zero-knowledge collaboration and trustworthy automation.
 - Implemented DoD‑compliant control tagging to ensure customers retain data sovereignty. This provided strict controls and audit trails while enabling frictionless sharing of models and artifacts among individual engineers, teams and organizations.
+- Led team building secure back end registry service (Python, FastAPI, SQLAlchemy, Zanzibar, Authzed) and the SDK for it.  The cryptographic core of the SDK was written in rust, with bindings exported for Python and WebAssembly. These were wrapped by the Python and TypeScript SDKs used by internal and client developers to build automation agents and the frontend web application.
+- Ensured that the CI/CD build automation validated that all compliance requirements were met on each release, and the results published in a format suitable for submission for compliance review to minimize the effort and time spent for each to receive ATO approval for deployment on secure and classified networks. 
 - Delivered all major program milestones on time and successfully relaunched the product for commercial and government clients.
-- Led two teams designing and implementing a secure back end registry service in Python and the SDKs for accessing it. The cryptographic core was written in Rust and compiled into Python bindings and WebAssembly, forming the foundation for the Python and TypeScript libraries used by automation agents and the web application.
 
 ### Director of Software Development, Raytheon Technologies
 *Sep 2021 - Nov 2023 · New York, NY*
 
 Rejoined what was formerly the UTC Digital Accelerator (DX)—reorganized post‑merger as Enterprise Data Services (EDX)—to build a next‑generation data platform for Raytheon aerospace applications.
 
-- Technical lead for pathfinder initiatives developing streaming flight telemetry pipelines for multiple models of Pratt & Whitney commercial jet engines.
-- Designed systems where, upon gate arrival, aircraft connect to ground stations to upload telemetry from thousands of sensors monitoring engines and control surfaces.
-- Within minutes, processed datasets and applied algorithmic fault detection, machine‑learning failure prediction and anomaly detection models.
-- Triggered alerts with responses proportional to severity and confidence—from grounding aircraft for emergency maintenance to scheduling inspection at subsequent destinations.
+- Technical lead for pathfinder initiatives developing streaming flight telemetry pipelines for multiple models of Pratt & Whitney commercial jet engines.  
+- As the data from the thousands of sensors on an engine streamed in it was checked by both a variety of fault detection algorithms, as well being scored by a number of failure prediction and anomaly detection models. 
+- The pipeline was designed so that any number of these could be attached, without adding latency overall.  
+- Faults flagged by any of these would triggered alerts, with responses proportional to severity and confidence of what was flagged -- from grounding aircraft for emergency maintenance, scheduling inspection at subsequent destinations, or simply flagging the data for manual review by a human operator.    
 - Maintained comprehensive audit trails to trace the lineage of every output field back to specific code revisions or model versions, enabling reproducibility.
-- Managed model‑training workflows with rigorous versioning; captured code revisions, training datasets and hyperparameters so results could be reproduced.
+- Managed model‑training workflows with rigorous versioning; captured code revisions, training datasets and snapshots and hyperparameters so results could be reproduced.
 - Technologies included Databricks, Spark, Python, SparkML, scikit‑learn and Pandas.
+- Let effort to "inner-source" code to address common problems faced by development teams at the company:  SDKs for parsing proprietary engine data formats, quickstart kits for Databricks projects, synthetic data generators, etc...
 - Led a team of 14 developers and contractors split across three agile project teams.
 - Supervised creation of onboarding resources for more than 40 teams, publishing guidelines, standards, best practices and reference project templates.
-- Oversaw teams porting and optimizing existing internal data science and machine‑learning libraries and tools to the new platform.
+- Assisted and advised these advised external teams in migrating their existing data pipelines and data scient projects from legacy infrastructure to the new Databricks platform.
 
 ### Head of Technology, Dayforward
 *Jan 2020 - Sep 2021 · New York, NY*
@@ -55,10 +57,10 @@ Head of technology and development lead for a life‑insurance startup. Led a sm
 
 Managed a team of 17 engineers at the UTC Digital Accelerator in Brooklyn. Oversaw multiple project teams—from IoT sensors and mobile apps for industrial refrigeration to standardized design systems and developer tools. As the frontend engineering director, led efforts to normalize, document and evangelize engineering processes, standards and best practices.
 
-### Independent Contractor, Barking For Centuries, LLC
+### Lead Engineer / Chief Technologist, Riverdrop
 *Jan 2018 - Feb 2019 · New York, NY*
 
-Served as chief technologist for an early‑stage startup and led a team of senior contractors to build a vertical product search engine.
+Served as chief technologist for an early‑stage startup and led a team of three senior engineers to build a specialized product search engine for a specific vertical market.   
 
 - Designed and implemented an ETL pipeline built around custom machine‑learning infrastructure for product identification and extraction. The pipeline was written in Python with NLP components using spaCy for classification and entity extraction, along with NLTK and scikit‑learn.
 - Developed product image recognition and classification models on AWS SageMaker, with preprocessing and color analysis using OpenCV and scikit‑image.
@@ -111,9 +113,6 @@ Founded and managed a consultancy of five principal partners and ten additional 
 Designed and developed high‑traffic, dynamic systems for distributing, processing and displaying multimedia news content. Notable project: AP Hosted Elections, which gathered, processed and presented up‑to‑the‑minute results for the 2004 U.S. presidential election and served as the sole source of data for all major U.S. news organizations.
 
 ## Education
-
-### Bachelor of Arts in History, The University of Chicago
-*Chicago, IL*
 
 ### Bachelor of Arts in History, The University of Chicago
 *Chicago, IL*
