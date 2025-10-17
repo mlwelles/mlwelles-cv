@@ -72,7 +72,7 @@ Served as chief technologist for an early‑stage startup and led a team of thre
 - Developed product image recognition and classification models on AWS SageMaker, with preprocessing and color analysis using OpenCV and scikit‑image.
 - Built asynchronous data flow using AWS SQS/SNS for message queuing and event-driven processing, with DynamoDB for metadata storage. Implemented retry logic, dead-letter queues, and idempotency for reliable processing.
 - Built the search API in Go against Elasticsearch indexes and developed the web frontend in React.js with TypeScript.
-- Architected the system as microservices and discrete transformation steps, each packaged as a Docker image and deployed via CI/CD to a Kubernetes cluster that automatically scaled both pods and worker nodes. The cluster itself was built and managed with Terraform.
+- Architected the system as microservices and discrete transformation steps, each packaged as a Docker image and deployed via CI/CD to a Kubernetes cluster, itself was built and managed with Terraform.
 
 ### Director of Engineering (Mobile), MediData
 *Feb 2017 - Jan 2018 · New York, NY*
@@ -81,7 +81,6 @@ Led engineering teams responsible for the Patient Cloud platform, which collects
 
 - Managed products including ePRO (iOS and Android app for patient‑reported outcomes), Patient Cloud (iOS tablet app for clinician‑reported outcomes), AppConnect (native SDK for third‑party developers), Sensor Link (platform for ingesting data from wearables) and the supporting backend.
 - Launched two major mobile product initiatives and migrated all native development to Swift and Kotlin.
-- Built compliance dashboards for data reporting and initiated migration of data collection and analysis to a scalable real‑time stream‑processing framework (Apache Flink).
 - Instituted organizational and process improvements that increased average team velocity by 2.5×.
 
 ### Principal Architect / Director of Mobile, Huge
