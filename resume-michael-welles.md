@@ -5,19 +5,27 @@
 
 ## Overview
 
-Hands-on engineering leader with decades of experience building safety-critical and data-intensive products. Advocate for efficient processes, clear communication, and the adoption of best practices in software development. I partner closely with product and operations to set pragmatic guardrails, automate quality signals, and model the engineering culture I expect—clear communication, strong code hygiene, and accountability. Comfortable pairing strategic architecture decisions with deep dives into code, infrastructure, and tooling.
+Hands-on engineering leader with decades of experience building safety-critical and data-intensive products at high velocity. Proven track record accelerating engineering teams (achieved 2.5× velocity increase at MediData) while maintaining code quality through pragmatic CI/CD, observability, and disciplined SDLC practices. I partner closely with product and operations to compress the build-ship-iterate loop, set pragmatic guardrails, automate quality signals, and model the engineering culture I expect—clear communication, strong code hygiene, and accountability. Comfortable pairing strategic architecture decisions with deep dives into code, infrastructure, and tooling.
+
+## Core Technologies
+
+**Languages & Frameworks:** Python, Rust, Go, Typescript, Swift, Objective-C, Kotlin, Java 
+**Data & Databases:** Databricks, Spark, PostgreSQL, DynamoDB, Elasticsearch
+**Cloud & Infrastructure:** Kubernetes, Docker, AWS (SQS/SNS, S3, IAM, VPC, SageMaker), Azure, Terraform
+**Reliability & Observability:** CI/CD, distributed tracing, metrics/logging, SLOs/alerting, incident response
+**Async Patterns:** Message queues, pub/sub, event-driven architecture, concurrency, idempotency, retry/backoff
 
 ## Experience
 
 ### Consulting Principal Engineer, CubeNexus.ai
 *Aug 2025 - Present · Remote*
 
-CubeNexus.ai builds a geospatial intelligence platform that pairs an LLM based natural language interface for querying temporal-spatial datasets with an dynamically updating interactive 3D visualization of the results.   I've been advising technical strategy across ingestion, analytics, and user experience, while diving deep in the codebase to bring it from prototype to production ready.
+CubeNexus.ai builds a geospatial intelligence platform that pairs an LLM-based natural language interface for querying temporal-spatial datasets with a dynamic and interactive 3D data visualizer. I've been advising technical strategy across ingestion, analytics, and user experience, while diving deep in the codebase to bring it from prototype to production ready.
 
-- Hardened the API backend with rebuilt auth and token handling, added formalized validation, and refactored code paths for clarity and performance.
-- Added support for live streaming of telemetry from the drones developed by the company.  Wired in Ably to the drone controller, the backend, and frontend WebGL visualizer.  Successfully demonstrated during a live flight of sensor equipped drone, the front-end rendering a visualization of its flight path and sensor readings on the globe in real-time. 
-- Added CI/CD to all project repositories with static analysis, automated tests, build and deployment automation.
-- Rewrote the ingestion pipeline to transforms geospatial data into the proprietry format at the core of the company IP so as to be able to handle datasets of the size that are produced by industry.  (PySpark, Pandas)
+- Added real-time telemetry streaming to the platform for live drone flights using event-driven architecture (Ably pub/sub messaging). Integrated asynchronous data flow from drone controller through backend to frontend WebGL visualizer, enabling real-time visualization of flight paths and sensor readings during live operations. Successfully demonstrated concurrent processing of multiple telemetry streams without blocking.
+- Rewrote the ingestion pipeline to transform geospatial datasets into the proprietary format at the core of the company IP. Previous implementation failed on datasets over 200MB; new pipeline handles multi-terabyte datasets required by industry (PySpark, Pandas, distributed computing).
+- Hardened the API backend (Python/FastAPI) with rebuilt authentication and token handling, formalized validation, and refactored code paths for clarity and performance. Implemented proper error handling, idempotency keys, and retry logic for reliability.
+- Established CI/CD across all repositories with static analysis, automated tests, build, and deployment automation.
 
 ### Principal Engineer, Istari Digital
 *Feb 2024 - Jul 2025 · New York, NY*
@@ -26,8 +34,8 @@ Istari Digital focuses on interconnected digital systems where secure, shareable
 
 - Designed cryptographically verified asset lineage that preserves dependencies, provenance, and tooling metadata without exposing sensitive payloads—enabling zero-knowledge collaboration and trustworthy automation.
 - Implemented DoD‑compliant control tagging to ensure customers retain data sovereignty. This provided strict controls and audit trails while enabling frictionless sharing of models and artifacts among individual engineers, teams and organizations.
-- Led team building secure back end registry service (Python, FastAPI, SQLAlchemy, Zanzibar, Authzed) and the SDK for it.  The cryptographic core of the SDK was written in rust, with bindings exported for Python and WebAssembly. These were wrapped by the Python and TypeScript SDKs used by internal and client developers to build automation agents and the frontend web application.
-- Ensured that the CI/CD build automation validated that all compliance requirements were met on each release, and the results published in a format suitable for submission for compliance review to minimize the effort and time spent for each to receive ATO approval for deployment on secure and classified networks. 
+- Led team building secure backend registry service (Python, FastAPI, SQLAlchemy, PostgreSQL, Zanzibar, Authzed) and the SDK for it. Designed database schema for asset relationships and metadata, tuned queries for complex lineage traversal, and managed migrations for zero-downtime deployments. The cryptographic core of the SDK was written in Rust, with bindings exported for Python and WebAssembly. These were wrapped by the Python and TypeScript SDKs used by internal and client developers to build automation agents and the frontend web application.
+- Ensured that the CI/CD build automation validated that all compliance requirements were met on each release, and the results published in a format suitable for submission for compliance review to minimize the effort and time spent for each to receive ATO approval for deployment on secure and classified networks.
 - Delivered all major program milestones on time and successfully relaunched the product for commercial and government clients.
 
 ### Director of Software Development, Raytheon Technologies
@@ -35,17 +43,15 @@ Istari Digital focuses on interconnected digital systems where secure, shareable
 
 Rejoined what was formerly the UTC Digital Accelerator (DX)—reorganized post‑merger as Enterprise Data Services (EDX)—to build a next‑generation data platform for Raytheon aerospace applications.
 
-- Technical lead for pathfinder initiatives developing streaming flight telemetry pipelines for multiple models of Pratt & Whitney commercial jet engines.  
-- As the data from the thousands of sensors on an engine streamed in it was checked by both a variety of fault detection algorithms, as well being scored by a number of failure prediction and anomaly detection models. 
-- The pipeline was designed so that any number of these could be attached, without adding latency overall.  
-- Faults flagged by any of these would triggered alerts, with responses proportional to severity and confidence of what was flagged -- from grounding aircraft for emergency maintenance, scheduling inspection at subsequent destinations, or simply flagging the data for manual review by a human operator.    
-- Maintained comprehensive audit trails to trace the lineage of every output field back to specific code revisions or model versions, enabling reproducibility.
-- Managed model‑training workflows with rigorous versioning; captured code revisions, training datasets and snapshots and hyperparameters so results could be reproduced.
+- Technical lead for pathfinder initiatives building real-time flight telemetry pipelines for multiple models of Pratt & Whitney commercial jet engines. Built streaming data platform where sensor data from thousands of engine sensors was both evaluated fault detection algorithms and scored by multiple failure prediction and anomaly detection models (SparkML, scikit-learn).
+- Designed pipeline for AI model training and orchestration: parallel evaluation of multiple ML models without adding latency, using asynchronous patterns and concurrent processing. 
+- Faults detected by any of these processes attached to the stream could trigger automated alerts with responses proportional to severity and confidence—from grounding aircraft for emergency maintenance to scheduling inspection or simply flagging for manual review.
+- Built comprehensive model evaluation framework with audit trails tracing every output field back to specific code revisions or model versions, enabling reproducibility. Managed model-training workflows with rigorous versioning; captured code revisions, training datasets, snapshots and hyperparameters.
 - Technologies included Databricks, Spark, Python, SparkML, scikit‑learn and Pandas.
-- Let effort to "inner-source" code to address common problems faced by development teams at the company:  SDKs for parsing proprietary engine data formats, quickstart kits for Databricks projects, synthetic data generators, etc...
+- Led effort to "inner-source" code to address common problems faced by development teams at the company: SDKs for parsing proprietary engine data formats, quickstart kits for Databricks projects, synthetic data generators, etc.
 - Led a team of 14 developers and contractors split across three agile project teams.
 - Supervised creation of onboarding resources for more than 40 teams, publishing guidelines, standards, best practices and reference project templates.
-- Assisted and advised these advised external teams in migrating their existing data pipelines and data scient projects from legacy infrastructure to the new Databricks platform.
+- Assisted and advised external teams in migrating their existing data pipelines and data science projects from legacy infrastructure to the new Databricks platform.
 
 ### Head of Technology, Dayforward
 *Jan 2020 - Sep 2021 · New York, NY*
@@ -60,12 +66,12 @@ Managed a team of 17 engineers at the UTC Digital Accelerator in Brooklyn. Overs
 ### Lead Engineer / Chief Technologist, Riverdrop
 *Jan 2018 - Feb 2019 · New York, NY*
 
-Served as chief technologist for an early‑stage startup and led a team of three senior engineers to build a specialized product search engine for a specific vertical market.   
+Served as chief technologist for an early‑stage startup and led a team of three senior engineers to build a specialized product search engine for a specific vertical market.
 
 - Designed and implemented an ETL pipeline built around custom machine‑learning infrastructure for product identification and extraction. The pipeline was written in Python with NLP components using spaCy for classification and entity extraction, along with NLTK and scikit‑learn.
 - Developed product image recognition and classification models on AWS SageMaker, with preprocessing and color analysis using OpenCV and scikit‑image.
-- Used DynamoDB and AWS SQS/SNS for data flow and message storage.
-- Built the search API in Go against Elasticsearch indexes and developed the web frontend in React.js.
+- Built asynchronous data flow using AWS SQS/SNS for message queuing and event-driven processing, with DynamoDB for metadata storage. Implemented retry logic, dead-letter queues, and idempotency for reliable processing.
+- Built the search API in Go against Elasticsearch indexes and developed the web frontend in React.js with TypeScript.
 - Architected the system as microservices and discrete transformation steps, each packaged as a Docker image and deployed via CI/CD to a Kubernetes cluster that automatically scaled both pods and worker nodes. The cluster itself was built and managed with Terraform.
 
 ### Director of Engineering (Mobile), MediData
