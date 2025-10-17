@@ -96,22 +96,22 @@ Started as Principal Architect and was later promoted to Director of Mobile.
 ### Manager of Mobile Technology, Consumer Reports
 *Jul 2011 - May 2013 · Yonkers, NY*
 
-Founded the mobile applications and new media group and built an in‑house team responsible for mobile application development. Defined mobile product strategies and led technical execution. Launched the flagship ratings application and managed external vendors maintaining a portfolio of legacy apps.
+Founded the mobile applications and new media group and built an in‑house team responsible for mobile application development.  Developed and launched the flagship ratings application and managed external vendors maintaining a portfolio of legacy apps.
 
 ### Senior Software Engineer – iTunes Store Video Workflow Group, Apple
 *Mar 2008 - May 2011 · Cupertino, CA*
 
-Senior engineer on a team of five responsible for encoding and assembling all iTunes video media. Owned the encoding toolchain used by the processing cluster and specified deliverable media formats, developed test suites to validate them and created reference media for hardware compliance testing. Contributed to continuous improvement and day‑to‑day operations, business production and the engineering of visual and audio quality of Store media. Led two major rewrites of the video workflow: one for the HDTV launch and another for international video and television.
+Senior engineer on a team of five responsible for encoding and assembling all iTunes video media. Owned the encoding toolchain used by the processing cluster and specified deliverable media formats, developed test suites for their validation and created reference media for hardware compliance testing. Led two major rewrites of the video workflow: one for the HDTV launch and another for international video and television.
 
 ### Senior Software Architect, The New York Times
 *Aug 2007 - Mar 2008 · New York, NY*
 
-Led the incorporation of continuous integration into the development and release processes of NYTimes.com. Created tools, procedures and processes for testing and packaging software through the production pipeline and authored automation tools. Supervised overall architectural design for the development of a new content management system.
+ Created tools for managing releases and production deployment.  production.  Oversaw offshore CMS development. 
 
 ### Founder, Partner, Bangstate
 *Jun 1999 - Mar 2008 · New York, NY*
 
-Founded and managed a consultancy of five principal partners and ten additional developers, designers and administrators. Oversaw the business and delivered projects for clients including The Associated Press, American Bar Association, Atlantic Records, Forbes Magazine, CIR/SEIU and Time Inc. Notable projects included TNEWS, an Internet distribution platform for the Associated Press that used standards‑based protocols (NNTP, IPTC NITF XML) to distribute content previously available only via proprietary satellite feeds, and handheld applications for the Military Family Research Institute at Purdue University.
+Founded and managed a small five person development consultancy. Oversaw the business and delivered projects for clients including The Associated Press, American Bar Association, Atlantic Records, Forbes Magazine, CIR/SEIU and Time Inc.
 
 ## Education
 

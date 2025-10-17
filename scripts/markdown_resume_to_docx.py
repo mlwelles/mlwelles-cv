@@ -89,17 +89,18 @@ def create_styled_docx(sections, output_path):
     section = doc.sections[0]
     section.top_margin = Inches(0.5)
     section.bottom_margin = Inches(0.5)
-    section.left_margin = Inches(0.75)
-    section.right_margin = Inches(0.75)
+    section.left_margin = Inches(0.6)
+    section.right_margin = Inches(0.6)
 
     # Name (Title)
     if 'name' in sections:
         name = doc.add_paragraph(sections['name'])
         name.alignment = WD_ALIGN_PARAGRAPH.CENTER
         name_run = name.runs[0]
-        name_run.font.size = Pt(20)
+        name_run.font.size = Pt(16)
         name_run.font.bold = True
         name_run.font.color.rgb = RGBColor(0, 0, 0)
+        name.paragraph_format.space_after = Pt(2)
 
     # Contact info
     if 'contact' in sections:
@@ -107,11 +108,9 @@ def create_styled_docx(sections, output_path):
         contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
         contact_text = ' | '.join([f"{label}: {value}" for label, value in sections['contact']])
         run = contact.add_run(contact_text)
-        run.font.size = Pt(10)
+        run.font.size = Pt(9)
         run.font.color.rgb = RGBColor(64, 64, 64)
-
-    # Add spacing
-    doc.add_paragraph()
+        contact.paragraph_format.space_after = Pt(6)
 
     # Process other sections
     for section_name, section_data in sections.items():
@@ -122,13 +121,13 @@ def create_styled_docx(sections, output_path):
             # Section header
             heading = doc.add_paragraph(section_name)
             heading_run = heading.runs[0]
-            heading_run.font.size = Pt(14)
+            heading_run.font.size = Pt(12)
             heading_run.font.bold = True
             heading_run.font.color.rgb = RGBColor(0, 51, 102)
 
             # Add bottom border to section header
-            heading.paragraph_format.space_before = Pt(6)
-            heading.paragraph_format.space_after = Pt(3)
+            heading.paragraph_format.space_before = Pt(4)
+            heading.paragraph_format.space_after = Pt(2)
 
             # Process section content
             for item in section_data['content']:
@@ -142,51 +141,54 @@ def create_styled_docx(sections, output_path):
                         if match:
                             bold_run = p.add_run(match.group(1) + ': ')
                             bold_run.font.bold = True
-                            bold_run.font.size = Pt(10)
+                            bold_run.font.size = Pt(9)
 
                             content_run = p.add_run(match.group(2))
-                            content_run.font.size = Pt(10)
+                            content_run.font.size = Pt(9)
                         else:
                             run = p.add_run(item)
-                            run.font.size = Pt(10)
-                        p.paragraph_format.space_after = Pt(2)
+                            run.font.size = Pt(9)
+                        p.paragraph_format.space_after = Pt(1)
                     else:
                         # Regular paragraph
                         p = doc.add_paragraph(item)
-                        p.runs[0].font.size = Pt(11)
-                        p.paragraph_format.space_after = Pt(6)
+                        p.runs[0].font.size = Pt(10)
+                        p.paragraph_format.space_after = Pt(4)
+                        p.paragraph_format.line_spacing = 1.0
 
                 elif isinstance(item, dict):
                     # Job/subsection
                     # Job title
                     title = doc.add_paragraph(item['title'])
                     title_run = title.runs[0]
-                    title_run.font.size = Pt(12)
+                    title_run.font.size = Pt(11)
                     title_run.font.bold = True
-                    title.paragraph_format.space_before = Pt(8)
-                    title.paragraph_format.space_after = Pt(2)
+                    title.paragraph_format.space_before = Pt(6)
+                    title.paragraph_format.space_after = Pt(1)
 
                     # Meta (dates/location)
                     if item['meta']:
                         meta = doc.add_paragraph(item['meta'])
                         meta_run = meta.runs[0]
-                        meta_run.font.size = Pt(10)
+                        meta_run.font.size = Pt(9)
                         meta_run.font.italic = True
                         meta_run.font.color.rgb = RGBColor(96, 96, 96)
-                        meta.paragraph_format.space_after = Pt(4)
+                        meta.paragraph_format.space_after = Pt(3)
 
                     # Description
                     if item['description']:
                         desc = doc.add_paragraph(item['description'])
-                        desc.runs[0].font.size = Pt(10)
-                        desc.paragraph_format.space_after = Pt(4)
+                        desc.runs[0].font.size = Pt(9)
+                        desc.paragraph_format.space_after = Pt(3)
+                        desc.paragraph_format.line_spacing = 1.0
 
                     # Bullets
                     for bullet in item['bullets']:
                         p = doc.add_paragraph(bullet, style='List Bullet')
-                        p.runs[0].font.size = Pt(10)
-                        p.paragraph_format.space_after = Pt(2)
+                        p.runs[0].font.size = Pt(9)
+                        p.paragraph_format.space_after = Pt(1)
                         p.paragraph_format.left_indent = Inches(0.25)
+                        p.paragraph_format.line_spacing = 1.0
 
     doc.save(output_path)
     print(f"Created styled DOCX: {output_path}")
