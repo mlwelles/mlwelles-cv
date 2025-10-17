@@ -1,5 +1,5 @@
 # Michael L. Welles
-- **Address:** 5657 NY-97, Narrowsburg NY 12764
+- **Address:** 38 Covert St, Brooklyn NY 11207
 - **Phone:** 917-586-9218
 - **Email:** mlwelles@gmail.com
 
@@ -112,11 +112,6 @@ Led the incorporation of continuous integration into the development and release
 *Jun 1999 - Mar 2008 · New York, NY*
 
 Founded and managed a consultancy of five principal partners and ten additional developers, designers and administrators. Oversaw the business and delivered projects for clients including The Associated Press, American Bar Association, Atlantic Records, Forbes Magazine, CIR/SEIU and Time Inc. Notable projects included TNEWS, an Internet distribution platform for the Associated Press that used standards‑based protocols (NNTP, IPTC NITF XML) to distribute content previously available only via proprietary satellite feeds, and handheld applications for the Military Family Research Institute at Purdue University.
-
-### Senior Software Developer, The Associated Press
-*Jun 2003 - Sep 2006 · New York, NY*
-
-Designed and developed high‑traffic, dynamic systems for distributing, processing and displaying multimedia news content. Notable project: AP Hosted Elections, which gathered, processed and presented up‑to‑the‑minute results for the 2004 U.S. presidential election and served as the sole source of data for all major U.S. news organizations.
 
 ## Education
 

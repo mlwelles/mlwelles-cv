@@ -46,3 +46,4 @@ The project uses `just` as the task runner (see `Justfile`):
 
 - `scripts/markdown_resume_to_tex.py` - Converts Markdown to LaTeX with ModernCV formatting
 - `scripts/tex_resume_to_markdown.py` - Reverse conversion from LaTeX to Markdown
+- Always run any python commands with uv
