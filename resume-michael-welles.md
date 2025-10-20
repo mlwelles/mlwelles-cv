@@ -20,12 +20,7 @@ Hands-on engineering leader with decades of experience building safety-critical 
 ### Consulting Principal Engineer, CubeNexus.ai
 *Aug 2025 - Present · Remote*
 
-CubeNexus.ai builds a geospatial intelligence platform that pairs an LLM-based natural language interface for querying temporal-spatial datasets with a dynamic and interactive 3D data visualizer. I've been advising technical strategy across ingestion, analytics, and user experience, while diving deep in the codebase to bring it from prototype to production ready.
-
-- Added real-time telemetry streaming to the platform for live drone flights using event-driven architecture (Ably pub/sub messaging). Integrated asynchronous data flow from drone controller through backend to frontend WebGL visualizer, enabling real-time visualization of flight paths and sensor readings during live operations. Successfully demonstrated concurrent processing of multiple telemetry streams without blocking.
-- Rewrote the ingestion pipeline to transform geospatial datasets into the proprietary format at the core of the company IP. Previous implementation failed on datasets over 200MB; new pipeline handles multi-terabyte datasets required by industry (PySpark, Pandas, distributed computing).
-- Hardened the API backend (Python/FastAPI) with rebuilt authentication and token handling, formalized validation, and refactored code paths for clarity and performance. Implemented proper error handling, idempotency keys, and retry logic for reliability.
-- Established CI/CD across all repositories with static analysis, automated tests, build, and deployment automation.
+Advising on technical strategy and architecture for a geospatial intelligence platform with LLM-based querying and 3D visualization. Rebuilt ingestion pipeline to handle multi-terabyte datasets (PySpark, Pandas), added real-time telemetry streaming with event-driven architecture, hardened API backend (Python/FastAPI), and established CI/CD across repositories.
 
 ### Principal Engineer, Istari Digital
 *Feb 2024 - Jul 2025 · New York, NY*
