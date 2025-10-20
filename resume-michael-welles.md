@@ -38,15 +38,10 @@ Istari Digital focuses on interconnected digital systems where secure, shareable
 
 Rejoined what was formerly the UTC Digital Accelerator (DX)—reorganized post‑merger as Enterprise Data Services (EDX)—to build a next‑generation data platform for Raytheon aerospace applications.
 
-- Technical lead for pathfinder initiatives building real-time flight telemetry pipelines for multiple models of Pratt & Whitney commercial jet engines. Built streaming data platform where sensor data from thousands of engine sensors was both evaluated fault detection algorithms and scored by multiple failure prediction and anomaly detection models (SparkML, scikit-learn).
-- Designed pipeline for AI model training and orchestration: parallel evaluation of multiple ML models without adding latency, using asynchronous patterns and concurrent processing. 
-- Faults detected by any of these processes attached to the stream could trigger automated alerts with responses proportional to severity and confidence—from grounding aircraft for emergency maintenance to scheduling inspection or simply flagging for manual review.
-- Built comprehensive model evaluation framework with audit trails tracing every output field back to specific code revisions or model versions, enabling reproducibility. Managed model-training workflows with rigorous versioning; captured code revisions, training datasets, snapshots and hyperparameters.
-- Technologies included Databricks, Spark, Python, SparkML, scikit‑learn and Pandas.
-- Led effort to "inner-source" code to address common problems faced by development teams at the company: SDKs for parsing proprietary engine data formats, quickstart kits for Databricks projects, synthetic data generators, etc.
-- Led a team of 14 developers and contractors split across three agile project teams.
-- Supervised creation of onboarding resources for more than 40 teams, publishing guidelines, standards, best practices and reference project templates.
-- Assisted and advised external teams in migrating their existing data pipelines and data science projects from legacy infrastructure to the new Databricks platform.
+- Technical lead for pathfinder initiatives building real-time flight telemetry pipelines for multiple models of Pratt & Whitney commercial jet engines. Built streaming data platform (Databricks, Spark, Python) where sensor data from thousands of engine sensors was evaluated by fault detection algorithms and scored by multiple failure prediction and anomaly detection models, triggering automated alerts with responses proportional to severity—from grounding aircraft for emergency maintenance to scheduling inspection.
+- Designed ML model training and orchestration pipeline with comprehensive audit trails tracing every output field back to specific code revisions or model versions. Implemented parallel evaluation of multiple models without adding latency using asynchronous patterns and concurrent processing.
+- Led effort to "inner-source" code to address common problems: SDKs for parsing proprietary engine data formats, quickstart kits for Databricks projects, and synthetic data generators.
+- Led team of 14 developers across three agile projects while supervising onboarding resources and migration support for 40+ teams adopting the new Databricks platform.
 
 ### Head of Technology, Dayforward
 *Jan 2020 - Sep 2021 · New York, NY*
