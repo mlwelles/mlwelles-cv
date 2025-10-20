@@ -27,11 +27,9 @@ Advising on technical strategy and architecture for a geospatial intelligence pl
 
 Istari Digital focuses on interconnected digital systems where secure, shareable digital threads facilitate the development of cyber‑physical systems. The platform enables zero‑trust, zero‑knowledge security while connecting and enabling the automation of tools as Cameo, CATIA, Nastran, OpenFOAM and other computational modeling suites to accelerate digital‑twin development and facilitate secure collaboration.
 
-- Designed cryptographically verified asset lineage that preserves dependencies, provenance, and tooling metadata without exposing sensitive payloads—enabling zero-knowledge collaboration and trustworthy automation.
-- Implemented DoD‑compliant control tagging to ensure customers retain data sovereignty. This provided strict controls and audit trails while enabling frictionless sharing of models and artifacts among individual engineers, teams and organizations.
-- Led team building secure backend registry service (Python, FastAPI, SQLAlchemy, PostgreSQL, Zanzibar, Authzed) and the SDK for it. Designed database schema for asset relationships and metadata, tuned queries for complex lineage traversal, and managed migrations for zero-downtime deployments. The cryptographic core of the SDK was written in Rust, with bindings exported for Python and WebAssembly. These were wrapped by the Python and TypeScript SDKs used by internal and client developers to build automation agents and the frontend web application.
-- Ensured that the CI/CD build automation validated that all compliance requirements were met on each release, and the results published in a format suitable for submission for compliance review to minimize the effort and time spent for each to receive ATO approval for deployment on secure and classified networks.
-- Delivered all major program milestones on time and successfully relaunched the product for commercial and government clients.
+- Designed cryptographically verified asset lineage and DoD‑compliant control tagging to preserve dependencies, provenance, and tooling metadata without exposing sensitive payloads—enabling zero-knowledge collaboration, data sovereignty, and frictionless sharing among engineers, teams, and organizations.
+- Led team building secure backend registry service (Python, FastAPI, SQLAlchemy, PostgreSQL, Zanzibar, Authzed) and SDK. Designed database schema for asset relationships and metadata, tuned queries for complex lineage traversal, and managed zero-downtime migrations. Cryptographic core written in Rust with bindings for Python and WebAssembly, wrapped by Python and TypeScript SDKs for automation agents and frontend.
+- Ensured CI/CD validated all compliance requirements on each release, publishing results for ATO submission to minimize approval effort for deployment on secure and classified networks. Delivered all major milestones on time and successfully relaunched product for commercial and government clients.
 
 ### Director of Software Development, Raytheon Technologies
 *Sep 2021 - Nov 2023 · New York, NY*
@@ -58,19 +56,16 @@ Managed a team of 17 engineers at the UTC Digital Accelerator in Brooklyn. Overs
 
 Served as chief technologist for an early‑stage startup and led a team of three senior engineers to build a specialized product search engine for a specific vertical market.
 
-- Designed and implemented an ETL pipeline built around custom machine‑learning infrastructure for product identification and extraction. The pipeline was written in Python with NLP components using spaCy for classification and entity extraction, along with NLTK and scikit‑learn.
-- Developed product image recognition and classification models on AWS SageMaker, with preprocessing and color analysis using OpenCV and scikit‑image.
-- Built asynchronous data flow using AWS SQS/SNS for message queuing and event-driven processing, with DynamoDB for metadata storage. Implemented retry logic, dead-letter queues, and idempotency for reliable processing.
-- Built the search API in Go against Elasticsearch indexes and developed the web frontend in React.js with TypeScript.
-- Architected the system as microservices and discrete transformation steps, each packaged as a Docker image and deployed via CI/CD to a Kubernetes cluster, itself was built and managed with Terraform.
+- Designed and implemented ML-driven ETL pipeline (Python, spaCy, NLTK, scikit-learn) for product identification and NLP-based entity extraction, with image recognition and classification models on AWS SageMaker using OpenCV and scikit-image for preprocessing and color analysis.
+- Built asynchronous data flow using AWS SQS/SNS for event-driven processing with DynamoDB for metadata storage, implementing retry logic, dead-letter queues, and idempotency for reliable processing. Developed search API in Go against Elasticsearch indexes and React.js/TypeScript frontend.
+- Architected system as microservices with discrete transformation steps, each packaged as Docker images and deployed via CI/CD to Kubernetes (built and managed with Terraform).
 
 ### Director of Engineering (Mobile), MediData
 *Feb 2017 - Jan 2018 · New York, NY*
 
 Led engineering teams responsible for the Patient Cloud platform, which collects clinical trial data directly from patients and clinicians via mobile devices and wearable sensors.
 
-- Managed products including ePRO (iOS and Android app for patient‑reported outcomes), Patient Cloud (iOS tablet app for clinician‑reported outcomes), AppConnect (native SDK for third‑party developers), Sensor Link (platform for ingesting data from wearables) and the supporting backend.
-- Launched two major mobile product initiatives and migrated all native development to Swift and Kotlin.
+- Managed products including ePRO (iOS/Android patient outcomes), Patient Cloud (iOS clinician outcomes), AppConnect (native SDK), Sensor Link (wearables platform), and supporting backend. Launched two major mobile initiatives and migrated all native development to Swift and Kotlin.
 - Instituted organizational and process improvements that increased average team velocity by 2.5×.
 
 ### Principal Architect / Director of Mobile, Huge
@@ -78,9 +73,10 @@ Led engineering teams responsible for the Patient Cloud platform, which collects
 
 Started as Principal Architect and was later promoted to Director of Mobile.
 
-- Led a cross‑functional team of more than 20 iOS, Android and backend engineers, QA analysts, designers and product managers. Evangelized agile best practices, continuous integration and continuous delivery.
-- As Principal Architect, sponsored new technology investigations and initiatives such as interior way‑finding, Leap Motion, Arduino and embedded system prototypes, and championed internal outreach through an engineering blog, meetups and open‑source efforts.
-- Directed notable client projects including smart Bluetooth audio/video accessories supporting live video streaming and voice commands, a companion application for an AAA game publisher that scanned players’ likenesses into avatars, and numerous B2B and B2C mobile commerce applications.
+- Led cross‑functional team of 20+ iOS, Android, and backend engineers, QA analysts, designers, and product managers. Evangelized agile best practices, continuous integration and continuous delivery.
+- Instituted engineering guild system for cross‑office knowledge sharing and formal sponsorship of guild‑proposed R&D initiatives. One guild‑led initiative generated a new product proposal that secured a $5M development contract.
+- Championed innovation through new technology investigations (interior way‑finding, Arduino and embedded system prototypes), engineering blog, meetups, and open‑source contributions.
+- Directed notable client projects including smart Bluetooth audio/video accessories with live streaming and voice commands, companion app for AAA game publisher that scanned players into avatars, and numerous B2B and B2C mobile commerce applications.
 
 ### Manager of Mobile Technology, Consumer Reports
 *Jul 2011 - May 2013 · Yonkers, NY*
