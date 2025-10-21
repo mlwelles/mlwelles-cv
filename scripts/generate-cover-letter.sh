@@ -47,8 +47,8 @@ COVER_LETTER="customized/$ID-michael-welles-cover-letter.md"
 
 if [ -f "$COVER_LETTER" ]; then
     echo "Cover letter already exists: $COVER_LETTER"
-    echo "Delete it first if you want to regenerate it."
-    exit 1
+    echo "Overwriting..."
+    echo ""
 fi
 
 echo "Generating cover letter for: $POSTING"
