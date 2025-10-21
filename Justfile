@@ -1,4 +1,11 @@
-set shell := ["bash", "-lc"]
+set shell := ["zsh", "-c"]
+
+# Set LibreOffice path based on OS
+LIBREOFFICE := if os() == "macos" {
+    "/Applications/LibreOffice.app/Contents/MacOS/soffice"
+} else {
+    "libreoffice"
+}
 
 default: resume-docx resume-docx-pdf
 
@@ -62,16 +69,23 @@ deps:
     fi
 
     # Check and install libreoffice
-    if ! command -v libreoffice &> /dev/null; then
-        echo "libreoffice not found. Installing..."
-        if [[ "$OS" == "macos" ]]; then
+    if [[ "$OS" == "macos" ]]; then
+        # On macOS, check for soffice binary in LibreOffice.app
+        if [ ! -f "/Applications/LibreOffice.app/Contents/MacOS/soffice" ]; then
+            echo "libreoffice not found. Installing..."
             brew install --cask libreoffice
-        elif [[ "$OS" == "linux" ]]; then
-            sudo apt-get update
-            sudo apt-get install -y libreoffice
+        else
+            echo "✓ libreoffice is installed"
         fi
     else
-        echo "✓ libreoffice is installed"
+        # On Linux, check for libreoffice command
+        if ! command -v libreoffice &> /dev/null; then
+            echo "libreoffice not found. Installing..."
+            sudo apt-get update
+            sudo apt-get install -y libreoffice
+        else
+            echo "✓ libreoffice is installed"
+        fi
     fi
 
     echo ""
@@ -93,7 +107,7 @@ resume-docx:
     source .venv/bin/activate && uv run scripts/markdown_resume_to_docx.py resume-michael-welles.md resume-michael-welles.docx
 
 resume-docx-pdf: resume-docx
-    libreoffice --headless --convert-to pdf --outdir . resume-michael-welles.docx
+    {{LIBREOFFICE}} --headless --convert-to pdf --outdir . resume-michael-welles.docx
 
 postings: postings-docx postings-pdf
 
@@ -112,6 +126,6 @@ postings-pdf: postings-docx
     for file in postings/resume-michael-welles*.docx postings/cover-letter*.docx; do \
         if [ -f "$file" ]; then \
             echo "Converting $file to PDF..."; \
-            libreoffice --headless --convert-to pdf --outdir postings "$file"; \
+            {{LIBREOFFICE}} --headless --convert-to pdf --outdir postings "$file"; \
         fi \
     done

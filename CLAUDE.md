@@ -47,3 +47,17 @@ The project uses `just` as the task runner (see `Justfile`):
 - `scripts/markdown_resume_to_tex.py` - Converts Markdown to LaTeX with ModernCV formatting
 - `scripts/tex_resume_to_markdown.py` - Reverse conversion from LaTeX to Markdown
 - Always run any python commands with uv
+
+## Writing Style Preferences
+
+When editing resume text or other written content in this repository:
+
+- **Conciseness**: Use clear, direct language. Remove unnecessary words and verbose phrasing.
+- **Clarity**: Ensure technical concepts and accomplishments are easy to understand. Avoid jargon unless industry-standard.
+- **Avoid Redundancies**: Don't repeat the same concept multiple times in close proximity (e.g., don't use "regulated industries" and "highly regulated environments" in the same paragraph).
+- **Active Voice**: Prefer active constructions over passive where possible.
+- **Specificity**: Include concrete details (metrics, technologies, outcomes) rather than vague descriptions.
+
+Examples of improvements:
+- ❌ "The platform comprised containerized Go gRPC microservices deployed on Kubernetes and exposed via a federated GraphQL API to a Vue.js frontend"
+- ✅ "Built platform with Go microservices on Kubernetes, federated GraphQL API, and Vue.js frontend"
