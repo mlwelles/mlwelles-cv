@@ -22,10 +22,22 @@ resume-md:
     source .venv/bin/activate && uv run scripts/tex_resume_to_markdown.py resume-michael-welles.tex resume-michael-welles.md
 
 resume-docx:
-    source .venv/bin/activate && uv run scripts/markdown_resume_to_docx.py resume-michael-welles.md resume-michael-welles.docx
+    #!/usr/bin/env bash
+    if [ ! -f resume-michael-welles.docx ] || [ resume-michael-welles.md -nt resume-michael-welles.docx ]; then \
+        echo "Building resume-michael-welles.docx..."; \
+        source .venv/bin/activate && uv run scripts/markdown_resume_to_docx.py resume-michael-welles.md resume-michael-welles.docx; \
+    else \
+        echo "resume-michael-welles.docx is up to date"; \
+    fi
 
 resume-docx-pdf: resume-docx
-    {{LIBREOFFICE}} --headless --convert-to pdf --outdir . resume-michael-welles.docx
+    #!/usr/bin/env bash
+    if [ ! -f resume-michael-welles.pdf ] || [ resume-michael-welles.docx -nt resume-michael-welles.pdf ]; then \
+        echo "Building resume-michael-welles.pdf..."; \
+        {{LIBREOFFICE}} --headless --convert-to pdf --outdir . resume-michael-welles.docx; \
+    else \
+        echo "resume-michael-welles.pdf is up to date"; \
+    fi
 
 postings: postings-docx postings-pdf
 
