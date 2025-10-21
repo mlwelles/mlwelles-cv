@@ -7,7 +7,7 @@ LIBREOFFICE := if os() == "macos" {
     "libreoffice"
 }
 
-default: resume-docx resume-docx-pdf
+default: resume-docx resume-docx-pdf postings
 
 deps:
     #!/usr/bin/env bash
