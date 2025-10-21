@@ -1,0 +1,109 @@
+# Michael L. Welles
+- **Address:** 38 Covert St, Brooklyn NY 11207
+- **Phone:** 917-586-9218
+- **Email:** mlwelles@gmail.com
+
+## Overview
+
+Engineering leader with deep expertise building high-performance data platforms and distributed systems. Proven track record leading technical teams through complex performance optimization challenges—from real-time telemetry processing pipelines handling thousands of sensors to ML model orchestration with parallel evaluation and zero-latency scaling. I combine hands-on architecture expertise with strong product intuition, translating user needs into measurable performance improvements while building teams that ship incrementally and maintain high execution standards. Skilled at establishing data-driven metrics, mapping bottlenecks, and driving technical vision across organizations.
+
+## Core Technologies
+
+**Languages & Frameworks:** Python, Rust, Go, Typescript, Swift, Objective-C, Kotlin, Java
+**Data & Databases:** Databricks, Spark, PostgreSQL, DynamoDB, Elasticsearch
+**Cloud & Infrastructure:** Kubernetes, Docker, AWS (SQS/SNS, S3, IAM, VPC, SageMaker), Azure, Terraform
+**Performance & Observability:** Distributed tracing, metrics/logging, profiling, SLOs/alerting, incremental rollouts
+**Async & Concurrency:** Message queues, pub/sub, event-driven architecture, parallel processing, async patterns
+
+## Experience
+
+### Consulting Principal Engineer, CubeNexus.ai
+*Aug 2025 - Present · Remote*
+
+Advising on technical strategy and architecture for a geospatial intelligence platform with LLM-based querying and 3D visualization. Rebuilt ingestion pipeline to handle multi-terabyte datasets (PySpark, Pandas), added real-time telemetry streaming with event-driven architecture, hardened API backend (Python/FastAPI), and established CI/CD across repositories.
+
+### Principal Engineer, Istari Digital
+*Feb 2024 - Jul 2025 · New York, NY*
+
+Istari Digital enables zero‑trust digital collaboration for cyber‑physical systems, connecting engineering tools (Cameo, CATIA, Nastran, OpenFOAM) to enable the programmatic and AI-assisted automation of digital engineering workflows.
+
+- Led team building high-performance backend registry service (Python, FastAPI, SQLAlchemy, PostgreSQL, Zanzibar, Authzed) and SDK. Designed database schema for asset relationships and metadata, tuned queries for complex lineage traversal, and managed zero-downtime migrations.
+- Established measurable performance targets for query response times and optimized critical paths. Implemented caching strategies and query plan optimization to maintain sub-100ms latency for complex graph traversals across thousands of assets.
+- Built cryptographic core in Rust with bindings for Python and WebAssembly, wrapped by Python and TypeScript SDKs for automation agents and frontend. Chose Rust for performance-critical cryptographic operations requiring memory safety guarantees.
+- Delivered all major milestones on time through incremental rollouts with feature flags and smooth customer migrations.
+
+### Director of Software Development, Raytheon Technologies
+*Sep 2021 - Nov 2023 · New York, NY*
+
+Led development of next‑generation data platform for Raytheon aerospace applications at Enterprise Data Services (formerly UTC Digital Accelerator).
+
+- Technical lead for pathfinder initiatives building real-time flight telemetry pipelines for Pratt & Whitney commercial jet engines. Built streaming data platform (Databricks, Spark, Python) processing thousands of engine sensors through fault detection and anomaly detection models, triggering severity-based automated alerts from emergency grounding to routine inspection scheduling.
+- Mapped performance bottlenecks across the pipeline and delivered measurable improvements: reduced end-to-end processing latency from minutes to seconds through batching optimization, partitioning strategy, and parallel stream processing. Established north star metrics for throughput (events/sec), latency (p50/p95/p99), and data freshness.
+- Designed ML model training and orchestration pipeline with parallel evaluation of multiple models without adding latency using asynchronous patterns and concurrent processing. Created abstraction layers enabling data science teams to deploy models independently while maintaining performance guarantees.
+- Positioned the platform's performance and scalability as key differentiators during internal adoption. Collaborated with field teams to articulate technical advantages and grow platform adoption from pilot to 40+ production teams.
+- Led team of 14 developers across three agile projects, focusing on incremental delivery, measurement, and testing. Grew team from 6 to 14 while maintaining high execution bar and technical standards.
+
+### Head of Technology, Dayforward
+*Jan 2020 - Sep 2021 · New York, NY*
+
+Head of technology and development lead for a life‑insurance startup. Led a small team that designed and built the company's algorithmic underwriting and policy‑management platform. Built platform with Go microservices on Kubernetes, federated GraphQL API, and Vue.js frontend. Initial development was completed in under ten months, and the platform launched the same day the company received regulatory approval.
+
+- Designed distributed architecture optimizing for both developer velocity and runtime performance. Established clear service boundaries and API contracts enabling parallel team execution while maintaining system-wide performance targets.
+
+### Director of Software Engineering, UTC Aerospace Systems
+*Feb 2019 - Jan 2020 · Brooklyn, NY*
+
+Managed a team of 17 engineers at the UTC Digital Accelerator in Brooklyn. Oversaw multiple project teams—from IoT sensors and mobile apps for industrial refrigeration to standardized design systems and developer tools. As the frontend engineering director, led efforts to normalize, document and evangelize engineering processes, standards and best practices.
+
+### Lead Engineer / Chief Technologist, Riverdrop
+*Jan 2018 - Feb 2019 · New York, NY*
+
+Served as chief technologist for an early‑stage startup and led a team of three senior engineers to build a specialized product search engine for a specific vertical market.
+
+- Designed and implemented ML-driven ETL pipeline (Python, spaCy, NLTK, scikit-learn) for product identification and NLP-based entity extraction, with image recognition and classification models on AWS SageMaker using OpenCV and scikit-image for preprocessing and color analysis.
+- Built asynchronous data flow using AWS SQS/SNS for event-driven processing with DynamoDB for metadata storage, implementing retry logic, dead-letter queues, and idempotency for reliable processing. Developed search API in Go against Elasticsearch indexes and React.js/TypeScript frontend.
+- Architected system for performance at scale: profiled and optimized hot paths in processing pipeline, implemented caching at multiple layers, and designed for horizontal scaling. Achieved target of processing 100K+ products daily with <200ms search response times.
+- Deployed as microservices with discrete transformation steps, each packaged as Docker images and deployed via CI/CD to Kubernetes (built and managed with Terraform).
+
+### Director of Engineering (Mobile), MediData
+*Feb 2017 - Jan 2018 · New York, NY*
+
+Led engineering teams responsible for the Patient Cloud platform, which collects clinical trial data directly from patients and clinicians via mobile devices and wearable sensors.
+
+- Managed products including ePRO (iOS/Android patient outcomes), Patient Cloud (iOS clinician outcomes), AppConnect (native SDK), Sensor Link (wearables platform), and supporting backend. Launched two major mobile initiatives and migrated all native development to Swift and Kotlin.
+- Instituted organizational and process improvements that increased average team velocity by 2.5×. Established metrics-driven development practices, clear prioritization frameworks, and incremental delivery patterns.
+
+### Principal Architect / Director of Mobile, Huge
+*May 2013 - Feb 2017 · Brooklyn, NY*
+
+- Led cross‑functional team of 20+ iOS, Android, and backend engineers, QA analysts, designers, and product managers. Evangelized agile best practices, continuous integration and continuous delivery.
+- Instituted engineering guild system for cross‑office knowledge sharing and formal sponsorship of guild‑proposed R&D initiatives. One guild‑led initiative generated a new product proposal that secured a $5M development contract.
+- Championed innovation through new technology investigations (interior way‑finding, Arduino and embedded system prototypes), engineering blog, meetups, and open‑source contributions.
+- Directed notable client projects including smart Bluetooth audio/video accessories with live streaming and voice commands, companion app for AAA game publisher that scanned players into avatars, and numerous B2B and B2C mobile commerce applications.
+
+### Manager of Mobile Technology, Consumer Reports
+*Jul 2011 - May 2013 · Yonkers, NY*
+
+Founded mobile applications group and built in‑house team for iOS/Android development. Developed and launched flagship ratings application and managed external vendors maintaining portfolio of legacy apps.
+
+### Senior Software Engineer – iTunes Store Video Workflow Group, Apple
+*Mar 2008 - May 2011 · Cupertino, CA*
+
+Senior engineer on a team of five responsible for encoding and assembling all iTunes video media. Owned the encoding toolchain used by the processing cluster, specified deliverable media formats, developed validation test suites, and created reference media for hardware compliance testing. Led two major workflow rewrites for HDTV launch and international video expansion.
+
+- Optimized video encoding pipeline for throughput and quality. Profiled encoder performance, identified bottlenecks in I/O and CPU utilization, and redesigned workflow for parallel processing across cluster resources.
+
+### Senior Software Architect, The New York Times
+*Aug 2007 - Mar 2008 · New York, NY*
+
+Created tools for managing releases and production deployment. Oversaw offshore CMS development.
+
+### Founder, Partner, Bangstate
+*Jun 1999 - Mar 2008 · New York, NY*
+
+Founded and managed a small five person development consultancy. Oversaw the business and delivered projects for clients including The Associated Press, American Bar Association, Atlantic Records, Forbes Magazine, CIR/SEIU and Time Inc.
+
+## Education
+
+### Bachelor of Arts in History, The University of Chicago
+*Chicago, IL*

@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Checking for job postings that need tailored resumes and cover letters..."
+echo "Checking for job postings that need tailored resumes..."
 echo ""
 
 missing_resumes=0
-missing_cover_letters=0
 
 # Find all posting files matching [id]-[NAME].md pattern
 # Supports both 2-char (00, 0a) and 3-char (000, 1aa) ID prefixes
@@ -14,6 +13,11 @@ for posting in customized/[0-9a-f][0-9a-f]-*.md customized/[0-9a-f][0-9a-f][0-9a
         # Extract the ID from the filename (everything before the first hyphen)
         filename=$(basename "$posting")
         id="${filename%%-*}"
+
+        # Skip if this is already a resume or cover letter
+        if [[ "$filename" == *"michael-welles-resume"* ]] || [[ "$filename" == *"michael-welles-cover-letter"* ]]; then
+            continue
+        fi
 
         # Check if corresponding resume exists
         resume="customized/$id-michael-welles-resume.md"
@@ -31,23 +35,6 @@ for posting in customized/[0-9a-f][0-9a-f]-*.md customized/[0-9a-f][0-9a-f][0-9a
             ((missing_resumes++))
             echo ""
         fi
-
-        # Check if corresponding cover letter exists
-        cover_letter="customized/$id-michael-welles-cover-letter.md"
-
-        if [ ! -f "$cover_letter" ]; then
-            echo "Missing cover letter for: $posting"
-            echo "  → Creating: $cover_letter"
-            echo ""
-
-            # Invoke Claude Code to generate the tailored cover letter
-            # --print: non-interactive mode, auto-exit after completion
-            # --dangerously-skip-permissions: bypass all permission checks for automation
-            claude --print --dangerously-skip-permissions "Please create a cover letter for the job description in $posting and save it to customized/$id-michael-welles-cover-letter.md. Write it like a real person having a conversation, not a keyword-stuffed summary of the resume. Tell specific stories that connect past work to what they need. Be professional but conversational. Focus on why the work matters, not just listing credentials. Can be multiple paragraphs if needed to sound natural."
-
-            ((missing_cover_letters++))
-            echo ""
-        fi
     fi
 done
 
@@ -57,8 +44,5 @@ if [ $missing_resumes -eq 0 ]; then
 else
     echo "  Generated $missing_resumes tailored resume(s)"
 fi
-if [ $missing_cover_letters -eq 0 ]; then
-    echo "✓ All job postings have corresponding cover letters"
-else
-    echo "  Generated $missing_cover_letters cover letter(s)"
-fi
+echo ""
+echo "To generate a cover letter for a job posting, run: just cover-letter <id>"

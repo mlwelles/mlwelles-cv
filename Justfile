@@ -14,14 +14,14 @@ deps:
 
 resume: resume-docx resume-pdf
 
-resume-pdf: resume-tex
+resume-tex-pdf: resume-tex
     pdflatex resume-michael-welles.tex
 
 resume-tex:
     source .venv/bin/activate && uv run scripts/markdown_resume_to_tex.py resume-michael-welles.md resume-michael-welles.tex
 
-resume-md:
-    source .venv/bin/activate && uv run scripts/tex_resume_to_markdown.py resume-michael-welles.tex resume-michael-welles.md
+#resume-md:
+#    source .venv/bin/activate && uv run scripts/tex_resume_to_markdown.py resume-michael-welles.tex resume-michael-welles.md
 
 resume-docx:
     #!/usr/bin/env bash
@@ -32,7 +32,7 @@ resume-docx:
         echo "resume-michael-welles.docx is up to date"; \
     fi
 
-resume-docx-pdf: resume-docx
+resume-pdf: resume-docx
     #!/usr/bin/env bash
     if [ ! -f resume-michael-welles.pdf ] || [ resume-michael-welles.docx -nt resume-michael-welles.pdf ]; then \
         echo "Building resume-michael-welles.pdf..."; \
@@ -51,3 +51,6 @@ customized-pdf: customized-docx
 
 customize:
     ./scripts/generate-customized-markdown.sh
+
+cover-letter id:
+    ./scripts/generate-cover-letter.sh {{id}}
