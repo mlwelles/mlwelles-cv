@@ -88,10 +88,25 @@ deps:
         fi
     fi
 
+    # Check and install TexLive (for pdflatex)
+    if ! command -v pdflatex &> /dev/null; then
+        echo "pdflatex not found. Installing TexLive..."
+        if [[ "$OS" == "macos" ]]; then
+            brew install --cask basictex
+            echo "Note: BasicTeX installed. You may need to run 'eval \"\$(/usr/libexec/path_helper)\"' to update PATH"
+            echo "or restart your shell. If you need additional LaTeX packages, use 'tlmgr install <package>'"
+        elif [[ "$OS" == "linux" ]]; then
+            sudo apt-get update
+            sudo apt-get install -y texlive-latex-base texlive-latex-extra
+        fi
+    else
+        echo "✓ pdflatex is installed"
+    fi
+
     echo ""
     echo "All dependencies are installed!"
     echo ""
-    echo "Note: If uv or Homebrew was just installed, you may need to restart your shell"
+    echo "Note: If uv, Homebrew, or TexLive was just installed, you may need to restart your shell"
     echo "or source the appropriate environment file."
 
 resume-pdf: resume-tex
