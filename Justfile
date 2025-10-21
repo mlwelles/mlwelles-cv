@@ -54,3 +54,6 @@ customize:
 
 cover-letter id:
     ./scripts/generate-cover-letter.sh {{id}}
+
+top-choice id:
+    ./scripts/generate-top-choice.sh {{id}}
