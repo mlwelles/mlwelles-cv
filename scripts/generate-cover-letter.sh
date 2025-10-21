@@ -63,6 +63,12 @@ claude --print --dangerously-skip-permissions "Please create a BRIEF and CONCISE
 echo ""
 echo "✓ Cover letter generated: $COVER_LETTER"
 echo ""
+echo "────────────────────────────────────────────────────────────────"
+echo "Cover Letter Content:"
+echo "────────────────────────────────────────────────────────────────"
+cat "$COVER_LETTER"
+echo "────────────────────────────────────────────────────────────────"
+echo ""
 
 # Generate DOCX version
 COVER_LETTER_DOCX="customized/$ID-michael-welles-cover-letter.docx"
