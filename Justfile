@@ -144,3 +144,42 @@ postings-pdf: postings-docx
             {{LIBREOFFICE}} --headless --convert-to pdf --outdir postings "$file"; \
         fi \
     done
+
+customize:
+    #!/usr/bin/env bash
+    set -e
+
+    echo "Checking for job postings that need tailored resumes..."
+    echo ""
+
+    missing_count=0
+
+    # Find all posting files matching [id]-[NAME].md pattern
+    for posting in postings/[0-9a-f][0-9a-f]-*.md; do \
+        if [ -f "$posting" ]; then \
+            # Extract the ID from the filename
+            filename=$(basename "$posting")
+            id="${filename:0:2}"
+
+            # Check if corresponding resume exists
+            resume="postings/resume-michael-welles-$id.md"
+
+            if [ ! -f "$resume" ]; then \
+                echo "Missing resume for: $posting"
+                echo "  → Creating: $resume"
+                echo ""
+
+                # Invoke Claude Code to generate the tailored resume
+                claude "Please create a tuned version of the resume for the job description in $posting and save it to $resume"
+
+                ((missing_count++))
+                echo ""
+            fi \
+        fi \
+    done
+
+    if [ $missing_count -eq 0 ]; then \
+        echo "✓ All job postings have corresponding tailored resumes!"
+    else \
+        echo "Generated $missing_count tailored resume(s)."
+    fi
