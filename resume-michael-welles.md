@@ -25,7 +25,7 @@ Advising on technical strategy and architecture for a geospatial intelligence pl
 ### Principal Engineer, Istari Digital
 *Feb 2024 - Jul 2025 · New York, NY*
 
-Istari Digital enables zero‑trust digital collaboration for cyber‑physical systems, connecting tools like Cameo, CATIA, Nastran, and OpenFOAM to accelerate digital‑twin development.
+Istari Digital enables zero‑trust digital collaboration for cyber‑physical systems, connecting engineering tools (Cameo, CATIA, Nastran, OpenFOAM) to enable the programmatic and AI-assisted automation of digital engineering workflows.
 
 - Designed cryptographically verified asset lineage and DoD‑compliant control tagging to preserve dependencies, provenance, and tooling metadata without exposing sensitive payloads—enabling zero-knowledge collaboration, data sovereignty, and frictionless sharing among engineers, teams, and organizations.
 - Led team building secure backend registry service (Python, FastAPI, SQLAlchemy, PostgreSQL, Zanzibar, Authzed) and SDK. Designed database schema for asset relationships and metadata, tuned queries for complex lineage traversal, and managed zero-downtime migrations. Cryptographic core written in Rust with bindings for Python and WebAssembly, wrapped by Python and TypeScript SDKs for automation agents and frontend.
