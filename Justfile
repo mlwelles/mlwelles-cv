@@ -156,11 +156,12 @@ customize:
     missing_cover_letters=0
 
     # Find all posting files matching [id]-[NAME].md pattern
-    for posting in postings/[0-9a-f][0-9a-f]-*.md; do \
+    # Supports both 2-char (00, 0a) and 3-char (000, 1aa) ID prefixes
+    for posting in postings/[0-9a-f][0-9a-f]-*.md postings/[0-9a-f][0-9a-f][0-9a-f]-*.md; do \
         if [ -f "$posting" ]; then \
-            # Extract the ID from the filename
+            # Extract the ID from the filename (everything before the first hyphen)
             filename=$(basename "$posting")
-            id="${filename:0:2}"
+            id="${filename%%-*}"
 
             # Check if corresponding resume exists
             resume="postings/resume-michael-welles-$id.md"
