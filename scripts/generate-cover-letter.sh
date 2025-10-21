@@ -73,7 +73,7 @@ echo ""
 # Generate DOCX version
 COVER_LETTER_DOCX="customized/$ID-michael-welles-cover-letter.docx"
 echo "Converting to DOCX..."
-source .venv/bin/activate && uv run scripts/markdown_resume_to_docx.py "$COVER_LETTER" "$COVER_LETTER_DOCX"
+source .venv/bin/activate && uv run scripts/markdown_to_docx.py "$COVER_LETTER" "$COVER_LETTER_DOCX"
 echo "✓ DOCX generated: $COVER_LETTER_DOCX"
 echo ""
 
