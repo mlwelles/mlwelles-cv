@@ -171,9 +171,8 @@ customize:
                 echo ""
 
                 # Invoke Claude Code to generate the tailored resume
-                # --yes: auto-approve all tool uses/edits
-                # Will automatically exit after task completion
-                claude --yes "Please create a tuned version of the resume for the job description in $posting and save it to postings/resume-michael-welles-$id.md"
+                # --permission-mode acceptEdits: auto-approve all edits
+                claude --permission-mode acceptEdits "Please create a tuned version of the resume for the job description in $posting and save it to postings/resume-michael-welles-$id.md"
 
                 ((missing_resumes++))
                 echo ""
@@ -188,9 +187,8 @@ customize:
                 echo ""
 
                 # Invoke Claude Code to generate the tailored cover letter
-                # --yes: auto-approve all tool uses/edits
-                # Will automatically exit after task completion
-                claude --yes "Please create a one paragraph cover letter for the job description in $posting and save it to postings/cover-letter-michael-welles-$id.md"
+                # --permission-mode acceptEdits: auto-approve all edits
+                claude --permission-mode acceptEdits "Please create a one paragraph cover letter for the job description in $posting and save it to postings/cover-letter-michael-welles-$id.md"
 
                 ((missing_cover_letters++))
                 echo ""
