@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-for file in postings/[0-9a-f][0-9a-f]-michael-welles-resume.md postings/[0-9a-f][0-9a-f][0-9a-f]-michael-welles-resume.md postings/[0-9a-f][0-9a-f]-michael-welles-cover-letter.md postings/[0-9a-f][0-9a-f][0-9a-f]-michael-welles-cover-letter.md; do
+for file in customized/[0-9a-f][0-9a-f]-michael-welles-resume.md customized/[0-9a-f][0-9a-f][0-9a-f]-michael-welles-resume.md customized/[0-9a-f][0-9a-f]-michael-welles-cover-letter.md customized/[0-9a-f][0-9a-f][0-9a-f]-michael-welles-cover-letter.md; do
     if [ -f "$file" ]; then
         basename="${file%.md}"
         docx="$basename.docx"

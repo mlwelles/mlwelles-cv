@@ -7,10 +7,12 @@ LIBREOFFICE := if os() == "macos" {
     "libreoffice"
 }
 
-default: resume-docx resume-docx-pdf postings
+default: resume customized
 
 deps:
     ./scripts/check-deps.sh
+
+resume: resume-docx resume-pdf
 
 resume-pdf: resume-tex
     pdflatex resume-michael-welles.tex
@@ -39,13 +41,13 @@ resume-docx-pdf: resume-docx
         echo "resume-michael-welles.pdf is up to date"; \
     fi
 
-postings: postings-docx postings-pdf
+customized: customize customized-docx customized-pdf
 
-postings-docx:
-    ./scripts/build-postings-docx.sh
+customized-docx:
+    ./scripts/build-customized-docx.sh
 
-postings-pdf: postings-docx
-    ./scripts/build-postings-pdf.sh
+customized-pdf: customized-docx
+    ./scripts/build-customized-pdf.sh
 
 customize:
-    ./scripts/customize-postings.sh
+    ./scripts/generate-customized-markdown.sh
