@@ -149,10 +149,11 @@ customize:
     #!/usr/bin/env bash
     set -e
 
-    echo "Checking for job postings that need tailored resumes..."
+    echo "Checking for job postings that need tailored resumes and cover letters..."
     echo ""
 
-    missing_count=0
+    missing_resumes=0
+    missing_cover_letters=0
 
     # Find all posting files matching [id]-[NAME].md pattern
     for posting in postings/[0-9a-f][0-9a-f]-*.md; do \
@@ -170,16 +171,41 @@ customize:
                 echo ""
 
                 # Invoke Claude Code to generate the tailored resume
-                claude "Please create a tuned version of the resume for the job description in $posting and save it to $resume"
+                # --yes: auto-approve all tool uses/edits
+                # Will automatically exit after task completion
+                claude --yes "Please create a tuned version of the resume for the job description in $posting and save it to postings/resume-michael-welles-$id.md"
 
-                ((missing_count++))
+                ((missing_resumes++))
+                echo ""
+            fi \
+
+            # Check if corresponding cover letter exists
+            cover_letter="postings/cover-letter-michael-welles-$id.md"
+
+            if [ ! -f "$cover_letter" ]; then \
+                echo "Missing cover letter for: $posting"
+                echo "  → Creating: $cover_letter"
+                echo ""
+
+                # Invoke Claude Code to generate the tailored cover letter
+                # --yes: auto-approve all tool uses/edits
+                # Will automatically exit after task completion
+                claude --yes "Please create a one paragraph cover letter for the job description in $posting and save it to postings/cover-letter-michael-welles-$id.md"
+
+                ((missing_cover_letters++))
                 echo ""
             fi \
         fi \
     done
 
-    if [ $missing_count -eq 0 ]; then \
-        echo "✓ All job postings have corresponding tailored resumes!"
+    echo "Summary:"
+    if [ $missing_resumes -eq 0 ]; then \
+        echo "✓ All job postings have corresponding tailored resumes"
     else \
-        echo "Generated $missing_count tailored resume(s)."
+        echo "  Generated $missing_resumes tailored resume(s)"
+    fi
+    if [ $missing_cover_letters -eq 0 ]; then \
+        echo "✓ All job postings have corresponding cover letters"
+    else \
+        echo "  Generated $missing_cover_letters cover letter(s)"
     fi
