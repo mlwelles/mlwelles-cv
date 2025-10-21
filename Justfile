@@ -171,8 +171,9 @@ customize:
                 echo ""
 
                 # Invoke Claude Code to generate the tailored resume
-                # --permission-mode acceptEdits: auto-approve all edits
-                claude --permission-mode acceptEdits "Please create a tuned version of the resume for the job description in $posting and save it to postings/resume-michael-welles-$id.md"
+                # --print: non-interactive mode, auto-exit after completion
+                # --dangerously-skip-permissions: bypass all permission checks for automation
+                claude --print --dangerously-skip-permissions "Please create a tuned version of the resume for the job description in $posting and save it to postings/resume-michael-welles-$id.md"
 
                 ((missing_resumes++))
                 echo ""
@@ -187,8 +188,9 @@ customize:
                 echo ""
 
                 # Invoke Claude Code to generate the tailored cover letter
-                # --permission-mode acceptEdits: auto-approve all edits
-                claude --permission-mode acceptEdits "Please create a one paragraph cover letter for the job description in $posting and save it to postings/cover-letter-michael-welles-$id.md"
+                # --print: non-interactive mode, auto-exit after completion
+                # --dangerously-skip-permissions: bypass all permission checks for automation
+                claude --print --dangerously-skip-permissions "Please create a cover letter for the job description in $posting and save it to postings/cover-letter-michael-welles-$id.md. Write it like a real person having a conversation, not a keyword-stuffed summary of the resume. Tell specific stories that connect past work to what they need. Be professional but conversational. Focus on why the work matters, not just listing credentials. Can be multiple paragraphs if needed to sound natural."
 
                 ((missing_cover_letters++))
                 echo ""
